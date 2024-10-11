@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atul's Portfolio</title>
+
+    <!-- Google Fonts: IBM Plex Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Raleway:wght@400;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <header>
+        <nav>
+            <div class="navbar-title" id="navbar-title">Portfolio</div> <!-- New Title -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-links">
+                <li><a href="#hero" onclick="closeMenu()" class="nav-link">Profile</a></li>
+                <li><a href="#skills" onclick="closeMenu()" class="nav-link">Technical Skills</a></li>
+                <li><a href="#projects" onclick="closeMenu()" class="nav-link">Projects</a></li>
+                <li><a href="#contact" onclick="closeMenu()" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="container">
+        <section id ="hero" class="hero">
+            <div class="hero-content , profile-container">
+                <h1>Atul Jain</h1>
+                <p><span id="typed-text"></span></p>
+                <a href="mailto:atuljain3003@gmail.com" class="cta-btn">HIRE ME</a>
+                <a href="https://drive.google.com/uc?export=download&id=1GH-n0DFIPr-Inz2ZAI3QPj_M6j9mD3I-" class="cta-btn">DOWNLOAD CV</a> <!-- New Button -->
+            </div>
+            <div class="hero-image , profile-container">
+                <img src="https://i.ibb.co/jVpLTdn/1705855360506.jpg" alt="Profile Image" ondragstart="return false;" oncontextmenu="return false;">
+            </div>
+        </section>
+    </div>   
+
+    <!-- Skills Section -->
+    <div class="container">
+        <section id ="skills" class="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Logo">
+                    HTML
+                </div>
+                <div class="skill">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Logo">
+                    CSS
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C Logo">
+                    C
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++ Logo">
+                    C++
+                </div>
+                <div class="skill">
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919853.png" alt="Docker Logo">
+                    Docker
+                </div>
+                <div class="skill">
+                    <img src="https://swimburger.net/media/fbqnp2ie/azure.svg" alt="Azure Logo">
+                    Azure
+                </div>
+                <div class="skill">
+                    <img src="https://i.ibb.co/xG1y3VB/Amazon-Web-Services-Logo-PNG-11.png" alt="AWS Logo">
+                    AWS
+                </div>
+                <div class="skill">
+                    <img src="https://i.ibb.co/R7RjmQk/pngwing-com-1.png" alt="Flutter Logo">
+                    Flutter
+                </div>
+                <div class="skill">
+                    <img src="https://www.logo.wine/a/logo/GitHub/GitHub-Icon-White-Dark-Background-Logo.wine.svg" alt="Git Logo">
+                    Git & GitHub
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DigitalOcean_logo.svg" alt="Digital Ocean Logo">
+                    Digital Ocean
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Android_Studio_icon_%282023%29.svg" alt="Android Studio Logo">
+                    Android Studio
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code Logo">
+                    VS Code
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/UbuntuCoF.svg" alt="Ubuntu Logo">
+                    Ubuntu
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap Logo">
+                    Bootstrap
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Blogger_icon.svg" alt="Blogger Logo">
+                    Blogger
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg" alt="WordPress Logo">
+                    WordPress
+                </div>
+                <div class="skill">
+                    <img src="https://i.ibb.co/B4Tmrn3/pngegg.png" alt="Firebase Logo">
+                    Firebase
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Project Section -->
+    <div class="container">
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="https://i.ibb.co/QM7C5bL/Alertify-Logo.png" alt="Project Image">
+                    <h3>Alertify</h3>
+                    <div class="tags">
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Dart</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Application</span>
+                    </div>
+                    <p>"Alertify" revolutionizes communication in college communities by consolidating all updates and reminders into one easy-to-use platform.</p>
+                    <div class="cta-btn-container">
+                        <a href="https://github.com/byAtulJain/Alertify" class="project-btn">Source Code</a>
+                        <a href="https://drive.google.com/file/d/1cC7oN2T86mIsBh8eRka-r5eys7bfk_nR/view?usp=drive_link" class="project-btn">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://i.ibb.co/3spdQqX/Screenshot-2024-10-06-160806.png" alt="Project Image">
+                    <h3>Logic Loop</h3>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">BOOTSTRAP</span>
+                        <span class="tag">Java Script</span>
+                        <span class="tag">One Compiler</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">Website</span>
+                    </div>
+                    <p>Logic Loops is a web-application that's designed to assist individuals in becoming proficient in programming and competitive coding. It accomplishes this by offering easy-to-use and interactive educational materials and tools.</p>
+                    <div class="cta-btn-container">
+                        <a href="https://github.com/byAtulJain/LopicLoop-Master" class="project-btn">Source Code</a>
+                        <a href="#" class="project-btn">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/66/6c/7c/666c7c8e-7f12-6658-d618-648da53d4394/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png" alt="Project Image">
+                    <h3>Aqua Alert</h3>
+                    <div class="tags">
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Dart</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Google Map API</span>
+                        <span class="tag">Apex Chart</span>
+                        <span class="tag">Application</span>
+                    </div>
+                    <p>Aqua Alert aims to provide advanced water metering and tracking, ensuring accurate measurement and fair distribution of water across different zones.</p>
+                    <div class="cta-btn-container">
+                        <a href="https://github.com/byAtulJain/Aqua_Alert" class="project-btn">Source Code</a>
+                        <a href="#" class="project-btn">Live Demo</a>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+    </div>
+    <!-- Contact Me Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="https://github.com/byAtulJain" target="_blank">
+                    <img src="https://i.ibb.co/Fmfv0Xv/pngwing-com.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/byatuljain/" target="_blank">
+                    <img src="https://i.ibb.co/8MwDFHh/CITYPNG-COM-HD-Vector-Flat-Linkedin-IN-Round-Icon-PNG-2000x2000.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:atuljain3003@gmail.com">
+                    <img src="https://i.ibb.co/5xRrkWz/CITYPNG-COM-Google-Mail-Envelope-Gmail-Illustration-Icon-800x800.png" alt="Gmail">
+                </a>
+            </div>
+            <p>OR</p>
+            <!-- Contact Form -->
+            <form class="contact-form" action="https://formspree.io/f/xvgopqzb" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="cta-btn">Send</button>
+            </form>
+        </div>
+    </section>
+    <!-- Scroll to Top Button -->
+    <div id="scrollToTop" class="scroll-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24"> <!-- Change the fill color here -->
+            <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+        </svg> <!-- Up arrow SVG -->
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Atul Jain All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <!-- Custom Cursor Element -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- JavaScript -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const customCursor = document.getElementById('customCursor');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            hamburger.classList.toggle('active');
+        });
+
+        // Custom Cursor Movement
+        document.addEventListener('mousemove', (e) => {
+            customCursor.style.top = `${e.clientY}px`;
+            customCursor.style.left = `${e.clientX}px`;
+        });
+
+        // Change cursor color on hover
+        const changeCursorColor = (color) => {
+            customCursor.style.backgroundColor = color;
+        };
+
+        // Add event listeners to links and buttons for hover effects
+        const linksAndButtons = document.querySelectorAll('a, .cta-btn, .skill');
+
+        linksAndButtons.forEach((element) => {
+            element.addEventListener('mouseenter', () => changeCursorColor('#3F8E00')); // Change to hover color
+        });
+
+        linksAndButtons.forEach((element) => {
+            element.addEventListener('mouseleave', () => changeCursorColor('#32CD32')); // Change back to default color
+        });
+
+        // Typing Effect
+        const typedTextElement = document.getElementById('typed-text');
+        const text = "Hello, I'm an engineer with a B.Tech in Information Technology. Over the years, I've developed a strong passion for building and optimizing software solutions.";
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typedTextElement.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, 50); // Adjust typing speed here
+            }
+        }
+
+        // Start typing effect on page load
+        window.onload = type;
+
+  // Function to toggle the menu on small screens
+  function toggleMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('show');
+        const hamburger = document.querySelector('.hamburger');
+        hamburger.classList.toggle('active'); // Optional: for hamburger animation
+    }
+
+    // Function to close the menu
+    function closeMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.remove('show'); // Close the menu
+        const hamburger = document.querySelector('.hamburger');
+        hamburger.classList.remove('active'); // Remove hamburger animation
+    }
+
+    </script>
+</body>
+</html>
