@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./css/services.css">
+<link rel="stylesheet" href="./css/index1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Vertical Navigation Bar</title>
+    <script>
+        fetch('./footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+            fetch('./navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+</head>
+<body>
+    <div id="navbar"></div>
+    
+      
+        <section class="our-work" style="hight:max; background-color: black;" >
+            <div class="work-grid">
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('/api/placeholder/400/200'); background-color: #d4af37; height: 250px;">
+                        <img src="./image/domain and hosting.png" alt="Placeholder Image" style="height: 250px; width: 370px; ">
+
+                    </div>
+                    <div class="work-content">
+                        <h2 class="work-title" style="font-size: 30px;">Domain & Hosting</h2>
+                        <span>Looking for reliable domain and hosting services to host your website at the top?</span>
+                        <a href="https://samaagum.com/" class="view-site" style="color: #80e800;"  >Read More</a>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-image" style=" background-color: #90EE90; height: 250px;">
+                        <img src="./image/web-devlopment.jpg" alt="Placeholder Image" style="height: 250px; width: 370px; ">
+                    </div> 
+                    <div class="work-content">
+                        <h2 class="work-title"style="font-size: 30px;">Web Design</h2>
+                        <span>Developing a user-friendly interface to engage more possible customers.</span>
+                        <a href="./web-devleopment.html" class="view-site" style="color: #80e800;"  >Read More</a>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image" style=" background-color: #90EE90; height: 250px;">
+                        <img src="./image/app-development.jpeg" alt="Placeholder Image" style="height: 250px; width: 370px; ">
+
+                    </div>
+                    <div class="work-content">
+                        <h2 class="work-title"style="font-size: 30px;">App Development</h2>
+                        <span>Developing mobile Apps for both IOS and Androids with the latest techniques.</span>
+                        <a href="./App-Development.html" class="view-site" style="color: #80e800;"  >Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="our-work" style="hight:max; background-color: black; margin-top: -40px;" >
+            <div class="work-grid">
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('/api/placeholder/400/200'); background-color: #d4af37; height: 250px;">
+                        <img src="./image/Website-maintenance.png" alt="Placeholder Image" style="height: 250px; width: 370px; ">
+
+                    </div>
+                    <div class="work-content">
+                        <h2 class="work-title"style="font-size: 30px;">Website Maintenance</h2>
+                        <span>From regular updates to site backups, security checks, and performance optimization.</span>
+                        <a href="./Website-Maintenance.html" class="view-site" style="color: #80e800;"  >Read More</a>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('/api/placeholder/400/200'); background-color: #90EE90; height: 250px;">
+                        <img src="./image/digital-marketing.png" alt="Placeholder Image" style="height: 250px; width: 370px; ">
+
+                    </div>
+                    <div class="work-content">
+                        <h2 class="work-title"style="font-size: 30px;">Digital Marketing</h2>
+                        <span>Whether you’re looking to improve your website’s search engine rankings, generate more leads through social media advertising.</span>
+                        <a href="./Digital-Marketing.html" class="view-site" style="color: #80e800;"  >Read More</a>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('/api/placeholder/400/200'); background-color: #90EE90; height: 250px;">
+                        <img src="./image/graphi-design.png" alt="Placeholder Image" style="height: 250px; width: 370px; ">
+
+                    </div>
+                    <div class="work-content">
+                        <h2 class="work-title"style="font-size: 30px;">Graphic Design</h2>
+                        <span>Magically designing logos, and other media to build the brand identity.</span>
+                        <a href="./Graphic-Design.html" class="view-site" style="color: #80e800;"  >Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    <div id="footer" style="margin-top: 100px;"></div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Dark background for contrast */
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.orange-text {
+    color: #FF4500; /* Bright orange color for the span */
+}
+
+/* Portfolio Section Styles */
+.our-work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between items */
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.work-item {
+    background-color: #444; /* Darker background for contrast */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.work-item:hover {
+    transform: translateY(-10px); /* Slight hover effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.work-image {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.work-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.work-title {
+    font-size: 34px;
+    margin: 0 0 10px;
+}
+
+.view-site {
+    color: #80e800;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+
+ 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 50px; /* Adjust font size for smaller screens */
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .work-item {
+        margin-bottom: 20px; /* Add space between items on small screens */
+    }
+}
