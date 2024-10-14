@@ -3,169 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Agnoz Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'agnoz-green': '#80e800',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-black text-white">
+    <header class="bg-black py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-agnoz-green text-3xl font-bold">{AGNOZTECH}</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-white hover:text-agnoz-green transition duration-300">Home</a>
+                <a href="#" class="text-white hover:text-agnoz-green transition duration-300">About</a>
+                <a href="#" class="text-white hover:text-agnoz-green transition duration-300">Services</a>
+                <a href="#" class="text-agnoz-green">Portfolio</a>
+                <a href="#" class="text-white hover:text-agnoz-green transition duration-300">Contact Us</a>
+            </nav>
+            <a href="#" class="hidden md:inline-block border border-agnoz-green text-agnoz-green px-4 py-2 rounded-full hover:bg-agnoz-green hover:text-black transition duration-300">Get A Quote →</a>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-20 px-4 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-agnoz-green opacity-20"></div>
+            <div class="container mx-auto relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    Crafting Your
+                    <br class="hidden md:inline">
+                    <span class="block text-5xl md:text-7xl mt-2">Web Destiny With</span>
+                    <span class="block text-5xl md:text-7xl mt-2">Stunning <span class="text-agnoz-green">Designs</span></span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    We don't just create websites; we build websites that turn your visitors into customers.
+                </p>
+                <a href="#" class="inline-block bg-agnoz-green text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-white transition duration-300">Get A Quote →</a>
+            </div>
+        </section>
+    </main>
+    <div class="container mx-auto py-20 px-4 md:px-0 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">What We <span class="text-agnoz-green">Are</span></h1>
+            <p class="text-sm mb-8">We are a crew of builders, designers & investors building disruptive products in Web3 and empowering founders along the way We are a crew of builders, designers & investors building disruptive products in Web3 and empowering founders along the way We are a crew of builders, designers & investors.</p>
+            <a href="#" class="text-agnoz-green hover:underline">Know More →</a>
+        </div>
+        <div class="md:w-1/2">
+            <img src="./image/pyriamid.png" alt="Logo" class="w-full max-w-md mx-auto" />
+        </div>
+    </div>
+
+    <div class="container mx-auto py-20 px-4 md:px-0 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+            <img src="./image/image2.png" alt="Smiling woman in office" class="w-full rounded-lg shadow-lg" />
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+            <h2 class="text-3xl font-bold mb-2">We Design,</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Builds Brand &<br><span class="text-agnoz-green">Digital Project</span></h1>
+            <p class="text-lg mb-8">We are a leading web design and development company, dedicated to providing businesses of all sizes with high-quality, custom-built websites that help them succeed online.</p>
+            <a href="./contact_us.html" class="bg-agnoz-green text-black px-6 py-3 rounded-full font-bold hover:bg-white transition duration-300">Get A Quote →</a>
+        </div>
+    </div>
+
+    <h1 class="text-3xl md:text-4xl font-bold mb-12 text-center">What We <span class="text-agnoz-green">Do</span></h1>
+
+    <div class="container mx-auto py-20 px-4 md:px-0">
+        <div class="space-y-8">
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row">
+                <img src="./image/web-devlopment.jpg" alt="Web Development" class="w-full md:w-1/3 h-56 md:h-auto object-cover" />
+                <div class="p-6 md:w-2/3 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-2">Web Design</h2>
+                        <p class="text-sm text-gray-300 mb-4">Developing a user-friendly interface to engage more possible customers.</p>
+                    </div>
+                    <a href="./web-devleopment.html" class="text-agnoz-green hover:underline inline-block">Read More →</a>
+                </div>
+            </div>
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row">
+                <img src="./image/app-development.jpeg" alt="App Development" class="w-full md:w-1/3 h-56 md:h-auto object-cover" />
+                <div class="p-6 md:w-2/3 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-2">App Development</h2>
+                        <p class="text-sm text-gray-300 mb-4">Developing mobile Apps for both IOS and Androids with the latest techniques.</p>
+                    </div>
+                    <a href="./App-Development.html" class="text-agnoz-green hover:underline inline-block">Read More →</a>
+                </div>
+            </div>
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row">
+                <img src="./image/GraphicDesign.jpeg" alt="Graphic Design" class="w-full md:w-1/3 h-56 md:h-auto object-cover" />
+                <div class="p-6 md:w-2/3 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-2">Graphic Design</h2>
+                        <p class="text-sm text-gray-300 mb-4">Magically designing logos, and other media to build the brand identity.</p>
+                    </div>
+                    <a href="./Graphic-Design.html" class="text-agnoz-green hover:underline inline-block">Read More →</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-lg">
+            <a href="#" class="text-agnoz-green hover:underline">Interested to See More? View More.</a>
+        </div>
+    </div>
+    
+    <section class="py-20 px-4 md:px-0">
+        <h1 class="text-3xl md:text-4xl font-bold mb-12 text-center">Our <span class="text-agnoz-green">Work</span></h1>
+        <div class="container mx-auto space-y-8">
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row">
+                <div class="md:w-1/3 h-64 bg-yellow-600"></div>
+                <div class="p-6 md:w-2/3 flex flex-col justify-center items-center">
+                    <h2 class="text-2xl font-bold mb-2">Samaagum</h2>
+                    <a href="https://samaagum.com/" target="_blank" rel="noopener noreferrer" class="text-agnoz-green hover:underline">View Site</a>
+                </div>
+            </div>
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row">
+                <div class="md:w-1/3 h-64 bg-green-400"></div>
+                <div class="p-6 md:w-2/3 flex flex-col justify-center items-center">
+                    <h2 class="text-2xl font-bold mb-2">Interxtv</h2>
+                    <a href="https://interxtv.com/" target="_blank" rel="noopener noreferrer" class="text-agnoz-green hover:underline">View Site</a>
+                </div>
+            </div>
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row">
+                <div class="md:w-1/3 h-64 bg-green-400"></div>
+                <div class="p-6 md:w-2/3 flex flex-col justify-center items-center">
+                    <h2 class="text-2xl font-bold mb-2">INTERACTIV</h2>
+                    <a href="https://interaxtive.com/" target="_blank" rel="noopener noreferrer" class="text-agnoz-green hover:underline">View Site</a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-12 text-lg">
+            <a href="#" class="text-agnoz-green hover:underline">Interested to See More? Click Here.</a>
+        </p>
+    </section>
+
+    <div class="container mx-auto py-20 px-4 md:px-0">
+        <div class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Technologies We <span class="text-agnoz-green">Working With</span></h2>
+            <div class="grid grid-cols-3 md:grid-cols-5 gap-8">
+                <img src="./image/wordpress.png" alt="WordPress" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/photoshop.png" alt="Photoshop" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/html5.png" alt="HTML5" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/css3.jpeg" alt="CSS3" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/php.png" alt="PHP" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/android.jpeg" alt="Android" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/flutter.png" alt="Flutter" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/mysql.png" alt="MySQL" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/javascript.png" alt="JavaScript" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/jquery.png" alt="jQuery" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/figma.png" alt="Figma" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/nodejs.png" alt="Node.js" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/canva.jpeg" alt="canva" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/reatnative.png" alt="reactnative" class="w-20 h-20 mx-auto object-contain" />
+                <img src="./image/gaphql.png" alt="graphql" class="w-20 h-20 mx-auto object-contain" />
+            </div>
+        </div>
+        <div class="text-center mb-20">
+            <p class="text-2xl mb-4">Are you excited to embark on your project journey with <span class="text-agnoz-green">our team</span>?</p>
+            <p class="mb-8">Let's turn your vision into reality together ✨. We are eager to collaborate with you, embracing the limitless possibilities of creative exploration.</p>
+            <a href="./contact_us.html" class="bg-agnoz-green text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition duration-300">Connect Now →</a>
+        </div>
+        <div class="text-center">
+            <h2 class="text-3xl font-bold mb-8">Connect <span class="text-agnoz-green">Now</span></h2>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300">Facebook</a>
+                <a href="#" class="bg-blue-400 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition duration-300">LinkedIn</a>
+                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300">Twitter</a>
+                <a href="#" class="bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition duration-300">Instagram</a>
+                <a href="#" class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition duration-300">Pinterest</a>
+                <a href="#" class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition duration-300">Dribbble</a>
+                <a href="#" class="bg-blue-700 text-white px-4 py-2 rounded-full hover:bg-blue-800 transition duration-300">Behance</a>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Let's Connect on <span class="text-agnoz-green">Social Media.</span></h3>
+            <p class="text-lg">Let's Connect 🤝 on social media 📱 and let's 🚀 explore your project ideas 💡 in detail!</p>
+        </div>
+    </div>
+
+    <div id="footer" class="bg-gray-900 py-8 px-4 md:px-0">
+        <!-- Footer content will be loaded here -->
+    </div>
+
     <script>
         fetch('./footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
             });
-            fetch('./navbar.html')
+        fetch('./navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;
             });
     </script>
-</head>
-<body>
-    <div id="navbar"></div>
-
-
-    <div class="red-effect">
-        <div class="red-effect-text">
-            <p>Crafting Your</p>
-            <h2>Web Destiny With<br>Stunning<span class="green-text"> Designs</span></h2>
-            <div class="description">
-                We don’t just create websites; we build<br> websites that turn your visitors into customers.
-            </div>
-            <br><br>
-            <a href="./contact_us.html" class="btn-quote">Get A Quote <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </div>
-
-    <!-- New container below the red effect -->
-    <div class="container1">
-        <div class="content">
-            <h1 style="color: white;margin-right: 230px;">What We <span class="green-text">Are</span></h1>
-            <p style="color: white; font-size: 14px;justify-content: center;">We are a crew of builders, designers & investors building disruptive products in Web3 and empowering founders along the way We are a crew of builders, designers & investors building disruptive products in Web3 and empowering founders along the way We are a crew of builders, designers & investors.</p>
-            <a href="#" class="btn">Know More →</a>
-        </div>
-        <div class="pyramid">
-            <img src="./image/pyriamid.png" alt="Logo" />
-
-        </div>
-    </div>
-    <div class="container1" style="background-color: black; margin-left: 70px;">
-        <div class="image-container" >
-            <img src="./image/image2.png" alt="Smiling woman in office">
-        </div>
-        <div class="content">
-            <h2 style="color: white;">We Design,</h2>
-            <h1 style="color: white; margin-right: 200px;">Builds Brand &<br><span class="green-text" style="margin-right: 20px;">Digital Project</span></h1>
-            <p>We are a leading web design and development company, dedicated to providing businesses of all sizes with high-quality, custom-built websites that help them succeed online.</p>
-            <a href="./contact_us.html" class="btn">Get A Quote →</a>
-        </div>
-    </div>        <h1 style="color: white; margin-bottom: -5px;">What We <span class="green-text">Do</span></h1>
-
-    <div class="container_services" style="background-color: black;">
-        <div class="services">
-            <div class="service-card">
-                <img src="./image/web-devlopment.jpg" alt="Web Development" style="height: 225px;" class="service-image">
-                <div class="service-content">
-                    <h2 style="color: white;font-size: 30px;">Web Design</h2>
-                    <p style="color: white; font-size: 14px;">Developing a user-friendly interface to engage more possible customers.</p>
-                    <a href="./web-devleopment.html" class="read-more">Read More <span class="arrow">→</span></a>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="./image/app-development.jpeg" alt="App Development" class="service-image"style="height: 225px;" >
-                <div class="service-content">
-                    <h2 style="color: white;font-size: 30px;">App Development</h2>
-                    <p style="color: white; font-size: 14px;">Developing mobile Apps for both IOS and Androids with the latest techniques.</p>
-                    <a href="./App-Development.html" class="read-more">Read More <span class="arrow">→</span></a>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="./image/GraphicDesign.jpeg" alt="Graphic Design" class="service-image">
-                <div class="service-content">
-                    <h2 style="color: white;font-size: 30px;">Graphic Design</h2>
-                    <p style="color: white; font-size: 14px;">Magically designing logos, and other media to build the brand identity.</p>
-                    <a href="./Graphic-Design.html" class="read-more">Read More <span class="arrow">→</span></a>
-                </div>
-            </div>
-        </div>
-        <div class="view-more" style="color: white;margin-top: -1px; margin-bottom: 50px;">
-            Interested to See More? View More.
-        </div>
-    </div>
-    <section class="our-work" style="background-color: black;"  >
-        <h1 style="margin-top: -20px; color: white;">Our <span class="green-text">Work</span></h1>
-            <div class="work-grid">
-                <div class="work-item">
-                    <div class="work-image" style="background-image: url('/api/placeholder/400/200'); background-color: #d4af37; height: 350px;"></div>
-                    <div class="work-content">
-                        <h2 class="work-title"style="color: white; font-size: 30px;align-items: center;">Samaagum</h2>
-                        <a href="https://samaagum.com/" class="view-site" style="color: #80e800;" target="_blank">View Site</a>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image" style="background-image: url('/api/placeholder/400/200'); background-color: #90EE90; height: 350px;"></div>
-                    <div class="work-content">
-                        <h2 class="work-title" style="color: white; font-size: 30px;align-items: center;">Interxtv</h2>
-                        <a href="https://interxtv.com/" class="view-site" style="color: #80e800;" target="_blank">View Site</a>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image" style="background-image: url('/api/placeholder/400/200'); background-color: #90EE90; height: 350px;"></div>
-                    <div class="work-content">
-                        <h2 class="work-title"style="color: white; font-size: 30px;align-items: center;">INTERACTIV</h2>
-                        <a href="https://interaxtive.com/" class="view-site" style="color: #80e800;" target="_blank">View Site</a>
-                    </div>
-                </div>
-            </div>
-        
-        <p class="more-info" style="color: white;margin-bottom: -20px;">Interested to See More? Click Here.</p>
-    </section>
-    <div class="container" style="background-color: black; margin-top: 100px;margin-bottom: 100px;">
-        
-        
-        <div class="section">
-            <h2 style="color: white;font-size: 30px;">Technologies We <span class="highlight">Working With</span></h2>
-            <div class="technologies">
-                <img src="./image/wordpress.png" alt="WordPress" class="tech-logo">
-                <img src="./image/photoshop.png" alt="Photoshop" class="tech-logo">
-                <img src="./image/html5.png" alt="HTML5" class="tech-logo">
-                <img src="./image/css3.jpeg" alt="CSS3" class="tech-logo">
-                <img src="./image/php.png" alt="PHP" class="tech-logo">
-                <img src="./image/android.jpeg" alt="Android" class="tech-logo">
-                <img src="./image/flutter.png" alt="Flutter" class="tech-logo">
-                <img src="./image/mysql.png" alt="MySQL" class="tech-logo">
-                <img src="./image/javascript.png" alt="JavaScript" class="tech-logo">
-                <img src="./image/jquery.png" alt="jQuery" class="tech-logo">
-                <img src="./image/figma.png" alt="Figma" class="tech-logo">
-                <img src="./image/nodejs.png" alt="Node.js" class="tech-logo">
-                <img src="./image/canva.jpeg" alt="canva" class="tech-logo">
-                <img src="./image/reatnative.png" alt="reactnative" class="tech-logo">
-                <img src="./image/gaphql.png" alt="graphql" class="tech-logo">
-            </div>
-        </div>
-        <div class="section">
-            <p style="font-size: 1.5em;color: white">Are you excited to embark on your project journey with <span class="highlight">our team</span>?</p>
-                    <p>Let's turn your vision into reality together ✨. We are eager to collaborate with you, embracing the limitless possibilities of creative exploration.</p>
-                    <a href="./contact_us.html" class="btn">Connect Now →</a>
-        </div>
-        <div class="section">
-            <h2 style="color: white;font-size: 30px;">Connect <span class="highlight">Now</span></h2>
-            <div class="cta">
-               
-            </div>
-           <div class="social-icons">
-                <a href="#" class="social-icon">Facebook</a>
-                <a href="#" class="social-icon">LinkedIn</a>
-                <a href="#" class="social-icon">Twitter</a>
-                <a href="#" class="social-icon">Instagram</a>
-                <a href="#" class="social-icon">Pinterest</a>
-                <a href="#" class="social-icon">Dribbble</a>
-                <a href="#" class="social-icon">Behance</a>
-            </div>            <h3 style="color: white;">Let's Connect on <span class="highlight">Social Media.</span></h3>
- <p>Let's Connect 🤝 on social media 📱 and let's 🚀 explore your project ideas 💡 in detail!</p>
-            
-        </div>
-    </div>
-
-
-    <div id="footer"></div>
 </body>
 </html>
