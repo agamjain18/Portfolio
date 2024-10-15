@@ -1,171 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Agnoz Tech</title>
-    <script>
-        fetch('./footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-            fetch('./navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            });
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radial Gradient Example</title>
+  <!-- Add Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    fetch('./footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+    fetch('./navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+</script>
+  <!-- Add Custom Styles -->
+    <style>
+        .bg-custom-radial {
+            background:radial-gradient(at center center, #80e800c6 0%, #80e80072 10%, #FFFFFF00 55%);
+        }
+        .text-custom-green {
+      color: #80e800;
+    }
+    </style>
 </head>
-<body>
+<body class="bg-black text-white">
+
     <div id="navbar"></div>
+  <!-- Content -->
+  <div class="relative flex flex-col items-center justify-center min-h-screen bg-custom-radial py-20 text-center px-4 md:px-0"> <!-- Added px-4 for small screens -->
+    <h2 class="text-xl md:text-2xl font-bold font-light tracking-wider mb-4">Crafting Your</h2>
+    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+      Web Destiny With <br> Stunning <span class="text-custom-green">Designs</span>
+    </h1>
+    <p class="text-gray-400 text-base md:text-lg mb-8">
+      We don’t just create websites; we build websites that turn your visitors into customers.
+    </p>
+    <a href="./contact_us.html">
+        <button class="px-8 py-4 text-white rounded-full shadow-lg font-semibold flex items-center gap-2 border-2 border-white">
+          Get A Quote 
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </button>
+    </a>
+</div>
+
+  <div class="flex flex-col md:flex-row justify-between items-center p-10 mx-10 rounded-xl my-10" style="background-color: #1a1a1a;">
+    <div class="text-white w-full md:w-1/2">
+        <h1 class="text-5xl mb-6 font-bold">What We <span class="text-custom-green">Are</span></h1>
+        <p class="text-lg text-justify mb-6">We are a crew of builders, designers & investors building disruptive products in Web3 and empowering founders along the way. We are a crew of builders, designers & investors building disruptive products in Web3 and empowering founders along the way.</p>
+        <a href="#" class="inline-block px-6 py-3 bg-transparent text-white border border-white rounded-full transition hover:bg-white hover:text-black">
+            Know More →
+        </a>
+    </div>
+    <div class="w-full md:w-1/2 flex justify-center mt-6 md:mt-0"> <!-- Added margin-top for smaller screens -->
+        <img src="./image/pyriamid.png" alt="Logo" class="rounded-xl w-full h-auto max-w-full"> <!-- Use full width and auto height -->
+    </div>
+</div>
+
+<div class="flex flex-col md:flex-row justify-between items-center bg-black p-10 mx-10 rounded-xl my-10">
+    <div class="w-full md:w-1/2 flex justify-center mb-6 md:mb-0 md:mr-12"> <!-- Add right margin for spacing on medium screens and up -->
+        <img src="./image/image2.png" alt="Smiling woman in office" class="rounded-xl w-full h-auto max-w-full"> 
+    </div>
+    <div class="text-white w-full md:w-1/2"> 
+        <h2 class="text-3xl mb-4">We Design,</h2>
+        <h1 class="text-6xl font-bold mb-6">Builds Brand &<br><span class="text-custom-green">Digital Project</span></h1>
+        <p class="text-gray-300 text-base mb-6">We are a leading web design and development company, dedicated to providing businesses of all sizes with high-quality, custom-built websites that help them succeed online.</p>
+        <a href="./services.html" class="inline-block px-6 py-3 bg-transparent text-white border border-white rounded-full transition hover:bg-white hover:text-black">
+            Get A Quote →
+        </a>
+    </div>
+</div>
 
 
-    <div class="red-effect">
-        <div class="red-effect-text">
-            <p>Crafting Your</p>
-            <h2>Web Destiny With<br>Stunning<span class="green-text"> Designs</span></h2>
-            <div class="description">
-                We don’t just create websites; we build<br> websites that turn your visitors into customers.
-            </div>
-            <br><br>
-            <a href="./contact_us.html" class="btn-quote">Get A Quote <i class="fas fa-arrow-right"></i></a>
+<h1 class="text-center text-4xl mb-1 font-bold" style="margin-bottom: -30px;">What We <span class="text-custom-green">Do</span></h1>
+<div class="flex flex-wrap justify-between items-center mx-10 p-10 rounded-xl">
+    <div class="w-full md:w-1/3 p-2"> <!-- Card 1 -->
+        <div class="p-6 rounded-xl" style="background-color: #1a1a1a; height: 500px;"> <!-- Set a fixed height for consistency -->
+            <img src="./image/web-devlopment.jpg" alt="Web Development" class="w-full h-2/3 rounded-xl mb-2"> <!-- Adjusted height -->
+            <h2 class="text-2xl mb-1 font-bold">Web Design</h2>
+            <p class="text-sm text-gray-400 mb-2">Developing a user-friendly interface to engage more possible customers.</p>
+            <a href="./web-devleopment.html" class="text-custom-green">Read More →</a>
         </div>
     </div>
-
-    <!-- New container below the red effect -->
-    <div class="container1">
-        <div class="content">
-            <h1 style="color: white;margin-right: 230px;">What We <span class="green-text">Are</span></h1>
-            <p style="color: white; font-size: 14px;justify-content: center;">We are a crew of builders, designers & investors building disruptive products in Web3 and empowering founders along the way We are a crew of builders, designers & investors building disruptive products in Web3 and empowering founders along the way We are a crew of builders, designers & investors.</p>
-            <a href="#" class="btn">Know More →</a>
-        </div>
-        <div class="pyramid">
-            <img src="./image/pyriamid.png" alt="Logo" />
-
+    
+    <div class="w-full md:w-1/3 p-2"> <!-- Card 2 -->
+        <div class="p-6 rounded-xl" style="background-color: #1a1a1a; height: 500px;"> <!-- Increased height to 500px for consistency -->
+            <img src="./image/app-development.jpeg" alt="App Development" class="w-full h-2/3 rounded-xl mb-2"> <!-- Adjusted height -->
+            <h2 class="text-2xl mb-1 font-bold">App Development</h2>
+            <p class="text-sm text-gray-400 mb-2">Developing mobile Apps for both iOS and Android with the latest techniques.</p>
+            <a href="./App-Development.html" class="text-custom-green">Read More →</a>
         </div>
     </div>
-    <div class="container1" style="background-color: black; margin-left: 70px;">
-        <div class="image-container" >
-            <img src="./image/image2.png" alt="Smiling woman in office">
-        </div>
-        <div class="content">
-            <h2 style="color: white;">We Design,</h2>
-            <h1 style="color: white; margin-right: 200px;">Builds Brand &<br><span class="green-text" style="margin-right: 20px;">Digital Project</span></h1>
-            <p>We are a leading web design and development company, dedicated to providing businesses of all sizes with high-quality, custom-built websites that help them succeed online.</p>
-            <a href="./contact_us.html" class="btn">Get A Quote →</a>
-        </div>
-    </div>        <h1 style="color: white; margin-bottom: -5px;">What We <span class="green-text">Do</span></h1>
-
-    <div class="container_services" style="background-color: black;">
-        <div class="services">
-            <div class="service-card">
-                <img src="./image/web-devlopment.jpg" alt="Web Development" style="height: 225px;" class="service-image">
-                <div class="service-content">
-                    <h2 style="color: white;font-size: 30px;">Web Design</h2>
-                    <p style="color: white; font-size: 14px;">Developing a user-friendly interface to engage more possible customers.</p>
-                    <a href="./web-devleopment.html" class="read-more">Read More <span class="arrow">→</span></a>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="./image/app-development.jpeg" alt="App Development" class="service-image"style="height: 225px;" >
-                <div class="service-content">
-                    <h2 style="color: white;font-size: 30px;">App Development</h2>
-                    <p style="color: white; font-size: 14px;">Developing mobile Apps for both IOS and Androids with the latest techniques.</p>
-                    <a href="./App-Development.html" class="read-more">Read More <span class="arrow">→</span></a>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="./image/GraphicDesign.jpeg" alt="Graphic Design" class="service-image">
-                <div class="service-content">
-                    <h2 style="color: white;font-size: 30px;">Graphic Design</h2>
-                    <p style="color: white; font-size: 14px;">Magically designing logos, and other media to build the brand identity.</p>
-                    <a href="./Graphic-Design.html" class="read-more">Read More <span class="arrow">→</span></a>
-                </div>
-            </div>
-        </div>
-        <div class="view-more" style="color: white;margin-top: -1px; margin-bottom: 50px;">
-            Interested to See More? View More.
+    
+    <div class="w-full md:w-1/3 p-2"> <!-- Card 3 -->
+        <div class="p-6 rounded-xl" style="background-color: #1a1a1a; height: 500px;"> <!-- Increased height to 500px for consistency -->
+            <img src="./image/GraphicDesign.jpeg" alt="Graphic Design" class="w-full h-2/3 rounded-xl mb-2"> <!-- Adjusted height -->
+            <h2 class="text-2xl mb-1 font-bold">Graphic Design</h2>
+            <p class="text-sm text-gray-400 mb-2">Magically designing logos and other media to build the brand identity.</p>
+            <a href="./Graphic-Design.html" class="text-custom-green">Read More →</a>
         </div>
     </div>
-    <section class="our-work" style="background-color: black;"  >
-        <h1 style="margin-top: -20px; color: white;">Our <span class="green-text">Work</span></h1>
-            <div class="work-grid">
-                <div class="work-item">
-                    <div class="work-image" style="background-image: url('/api/placeholder/400/200'); background-color: #d4af37; height: 350px;"></div>
-                    <div class="work-content">
-                        <h2 class="work-title"style="color: white; font-size: 30px;align-items: center;">Samaagum</h2>
-                        <a href="https://samaagum.com/" class="view-site" style="color: #80e800;" target="_blank">View Site</a>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image" style="background-image: url('/api/placeholder/400/200'); background-color: #90EE90; height: 350px;"></div>
-                    <div class="work-content">
-                        <h2 class="work-title" style="color: white; font-size: 30px;align-items: center;">Interxtv</h2>
-                        <a href="https://interxtv.com/" class="view-site" style="color: #80e800;" target="_blank">View Site</a>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image" style="background-image: url('/api/placeholder/400/200'); background-color: #90EE90; height: 350px;"></div>
-                    <div class="work-content">
-                        <h2 class="work-title"style="color: white; font-size: 30px;align-items: center;">INTERACTIV</h2>
-                        <a href="https://interaxtive.com/" class="view-site" style="color: #80e800;" target="_blank">View Site</a>
-                    </div>
-                </div>
+</div>
+
+
+<a href="./profile.html"><p class="text-center text-custom-green mt-10" style="margin-top: -45px;">Interested to See More? Click Here.</p></a>
+
+<h1 class="text-center text-4xl mb-1 font-bold" style="margin-top: 70px; margin-bottom: -30px;">Our <span class="text-custom-green">Work</span></h1>
+<div class="flex flex-wrap justify-between items-center mx-10 p-10">
+    <div class="w-full md:w-1/3 p-2"> <!-- Card 1 -->
+        <div class="rounded-xl overflow-hidden" style="background-color: #1a1a1a; height: 400px; display: flex; flex-direction: column;"> <!-- Added overflow-hidden -->
+            <img src="./image/web-devlopment.jpg" alt="Web Development" class="w-full h-4/5" style="flex-shrink: 0; margin: 0; padding: 0;"> <!-- Image occupies 80% of the card height -->
+            <div class="p-3" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;"> <!-- Ensure the text is at the bottom -->
+                <h2 class="text-2xl mb-1 font-bold">Web Design</h2>
+                <a href="./web-devleopment.html" class="text-custom-green">Read More →</a>
             </div>
-        
-        <p class="more-info" style="color: white;margin-bottom: -20px;">Interested to See More? Click Here.</p>
-    </section>
-    <div class="container" style="background-color: black; margin-top: 100px;margin-bottom: 100px;">
-        
-        
-        <div class="section">
-            <h2 style="color: white;font-size: 30px;">Technologies We <span class="highlight">Working With</span></h2>
-            <div class="technologies">
-                <img src="./image/wordpress.png" alt="WordPress" class="tech-logo">
-                <img src="./image/photoshop.png" alt="Photoshop" class="tech-logo">
-                <img src="./image/html5.png" alt="HTML5" class="tech-logo">
-                <img src="./image/css3.jpeg" alt="CSS3" class="tech-logo">
-                <img src="./image/php.png" alt="PHP" class="tech-logo">
-                <img src="./image/android.jpeg" alt="Android" class="tech-logo">
-                <img src="./image/flutter.png" alt="Flutter" class="tech-logo">
-                <img src="./image/mysql.png" alt="MySQL" class="tech-logo">
-                <img src="./image/javascript.png" alt="JavaScript" class="tech-logo">
-                <img src="./image/jquery.png" alt="jQuery" class="tech-logo">
-                <img src="./image/figma.png" alt="Figma" class="tech-logo">
-                <img src="./image/nodejs.png" alt="Node.js" class="tech-logo">
-                <img src="./image/canva.jpeg" alt="canva" class="tech-logo">
-                <img src="./image/reatnative.png" alt="reactnative" class="tech-logo">
-                <img src="./image/gaphql.png" alt="graphql" class="tech-logo">
-            </div>
-        </div>
-        <div class="section">
-            <p style="font-size: 1.5em;color: white">Are you excited to embark on your project journey with <span class="highlight">our team</span>?</p>
-                    <p>Let's turn your vision into reality together ✨. We are eager to collaborate with you, embracing the limitless possibilities of creative exploration.</p>
-                    <a href="./contact_us.html" class="btn">Connect Now →</a>
-        </div>
-        <div class="section">
-            <h2 style="color: white;font-size: 30px;">Connect <span class="highlight">Now</span></h2>
-            <div class="cta">
-               
-            </div>
-           <div class="social-icons">
-                <a href="#" class="social-icon">Facebook</a>
-                <a href="#" class="social-icon">LinkedIn</a>
-                <a href="#" class="social-icon">Twitter</a>
-                <a href="#" class="social-icon">Instagram</a>
-                <a href="#" class="social-icon">Pinterest</a>
-                <a href="#" class="social-icon">Dribbble</a>
-                <a href="#" class="social-icon">Behance</a>
-            </div>            <h3 style="color: white;">Let's Connect on <span class="highlight">Social Media.</span></h3>
- <p>Let's Connect 🤝 on social media 📱 and let's 🚀 explore your project ideas 💡 in detail!</p>
-            
         </div>
     </div>
+    <div class="w-full md:w-1/3 p-2"> <!-- Card 2 -->
+        <div class="rounded-xl overflow-hidden" style="background-color: #1a1a1a; height: 400px; display: flex; flex-direction: column;"> <!-- Added overflow-hidden -->
+            <img src="./image/app-development.jpeg" alt="App Development" class="w-full h-4/5" style="flex-shrink: 0; margin: 0; padding: 0;"> <!-- Image occupies 80% of the card height -->
+            <div class="p-3" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;"> <!-- Ensure the text is at the bottom -->
+                <h2 class="text-2xl mb-1 font-bold ">App Development</h2>
+                <a href="./App-Development.html" class="text-custom-green ">Read More →</a>
+            </div>
+        </div>
+    </div>
+    <div class="w-full md:w-1/3 p-2"> <!-- Card 3 -->
+        <div class="rounded-xl overflow-hidden" style="background-color: #1a1a1a; height: 400px; display: flex; flex-direction: column;"> <!-- Added overflow-hidden -->
+            <img src="./image/GraphicDesign.jpeg" alt="Graphic Design" class="w-full h-4/5" style="flex-shrink: 0; margin: 0; padding: 0;"> <!-- Image occupies 80% of the card height -->
+            <div class="p-3" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;"> <!-- Ensure the text is at the bottom -->
+                <h2 class="text-2xl mb-1 font-bold">Graphic Design</h2>
+                <a href="./Graphic-Design.html" class="text-custom-green">Read More →</a>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="./profile.html"><p class="text-center text-custom-green mt-10" style="margin-top: -45px;">Interested to See More? Click Here.</p></a>
 
 
-    <div id="footer"></div>
+<div class="flex flex-wrap justify-between items-center mx-4 md:mx-10 mt-20 p-4 md:p-10">
+    <div class="w-full md:w-1/3 p-2"> <!-- Card 1 -->
+        <div class="rounded-xl overflow-hidden p-2" style="background-color: #1a1a1a; display: flex; flex-direction: column; min-height: 400px;"> <!-- Removed fixed height -->
+            <h2 class="text-white text-3xl font-bold mt-6 mb-8">Technologies We <span class="highlight text-custom-green">Working With</span></h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6  justify-items-center"> <!-- Adjusted gap -->
+                <img src="./image/wordpress.png" alt="WordPress" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/photoshop.png" alt="Photoshop" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/html5.png" alt="HTML5" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/css3.jpeg" alt="CSS3" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/php.png" alt="PHP" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/android.jpeg" alt="Android" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/flutter.png" alt="Flutter" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/mysql.png" alt="MySQL" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/javascript.png" alt="JavaScript" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/jquery.png" alt="jQuery" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/figma.png" alt="Figma" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/nodejs.png" alt="Node.js" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/canva.jpeg" alt="Canva" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/reatnative.png" alt="React Native" class="tech-logo w-10 h-10 rounded-lg">
+                <img src="./image/gaphql.png" alt="GraphQL" class="tech-logo w-10 h-10 rounded-lg">
+            </div>
+        </div>
+    </div>
+    <div class="w-full md:w-1/3 p-2"> <!-- Card 2 -->
+        <div class="rounded-xl overflow-hidden" style="background-color: #1a1a1a; display: flex; flex-direction: column; min-height: 400px;"> <!-- Removed fixed height -->
+            <div class="section flex-1 p-6 rounded-lg">
+                <p class="text-white text-2xl font-bold mt-2 mb-8">Are you excited to embark on your project journey with our team?</p>
+                <p class="text-gray-300 mt-2">Let's turn your vision into reality together ✨. We are eager to collaborate with you, embracing the limitless possibilities of creative exploration.</p>
+                <a href="./contact_us.html" class="btn mt-4 inline-block px-6 py-2 text-white rounded-full transition duration-200 border-2 border-white hover:bg-[#80e800]">
+                    Connect Now →
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="w-full md:w-1/3 p-2"> <!-- Card 3 -->
+        <div class="rounded-xl overflow-hidden" style="background-color: #1a1a1a; display: flex; flex-direction: column; min-height: 400px;"> <!-- Removed fixed height -->
+            <div class="section flex-1 p-6 rounded-lg">
+                <h2 class="text-white text-3xl font-bold mb-4">Connect <span class="highlight text-custom-green">Now</span></h2>
+                <div class="social-icons mb-4 flex gap-1 flex-wrap">
+                    <a href="#" class="social-icon text-white mx-2 mb-2 border rounded-full bg-gray-800 w-20 h-8 flex items-center justify-center hover:text-custom-green">Facebook</a>
+                    <a href="#" class="social-icon text-white mx-2 mb-2 border rounded-full bg-gray-800 w-20 h-8 flex items-center justify-center hover:text-custom-green">Linkedin</a>
+                    <a href="#" class="social-icon text-white mx-2 mb-2 border rounded-full bg-gray-800 w-20 h-8 flex items-center justify-center hover:text-custom-green">Twitter</a>
+                    <a href="#" class="social-icon text-white mx-2 mb-2 border rounded-full bg-gray-800 w-20 h-8 flex items-center justify-center hover:text-custom-green">Instagram</a>
+                    <a href="#" class="social-icon text-white mx-2 mb-2 border rounded-full bg-gray-800 w-20 h-8 flex items-center justify-center hover:text-custom-green">Pinterest</a>
+                    <a href="#" class="social-icon text-white mx-2 mb-2 border rounded-full bg-gray-800 w-20 h-8 flex items-center justify-center hover:text-custom-green">Dribbble</a>
+                    <a href="#" class="social-icon text-white mx-2 mb-2 border rounded-full bg-gray-800 w-20 h-8 flex items-center justify-center hover:text-custom-green">Behance</a>
+                </div>
+                <h3 class="text-white">Let's Connect on <span class="highlight text-custom-green">Social Media.</span></h3>
+                <p class="text-gray-300">Let's Connect 🤝 on social media 📱 and let's 🚀 explore your project ideas 💡 in detail!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
 </body>
 </html>

@@ -1,110 +1,63 @@
-        <nav class="navbar" style="margin-top: -4%;">
-            <div class="logo">
-                <img src="./image/logo.png" alt="Logo" />
-            </div>
-            <ul class="nav-links">
-                <li>
-                    <a href="./index.html">Home</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="./services.html">Services</a>
-                    
-                        
-                </li>
-                <li>
-                    <a href="./profile.html">Portfolio</a>
-                </li>
-                <li>
-                    <a href="./contact_us.html">Contact Us</a>
-                </li>
-            </ul>
-            <a href="./contact_us.html" class="btn-quote">Get A Quote <i class="fas fa-arrow-right"></i></a>
-        </nav>
-            <style>
-                .navbar {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    background-color: #000;
-                    padding: 15px;
-                }
+<!DOCTYPE html>
+<html lang="en">
 
-                .nav-links {
-                    display: flex;
-                    align-items: center;
-                }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Responsive Navbar with Drawer</title>
+</head>
 
-                .nav-links li {
-                    position: relative;
-                    margin: 0 15px;
-                }
+<body class="bg-gray-100">
 
-                .nav-links a {
-                    color: white;
-                    text-decoration: none;
-                    padding: 10px;
-                }
+    <nav class="flex items-center justify-between bg-black p-4 md:p-6 lg:p-8" style="margin-top: -3%;">
+        <div class="logo">
+            <img src="./image/logo.png" alt="Logo" class="h-52" />
+        </div>
 
-                .dropdown-container {
-                    position: absolute;
-                    background-color: rgb(0, 0, 0); /* Solid background with some transparency */
-                    z-index: 1;
-                    margin-top: 5px;
-                    border-radius: 20px;
-                    width: 1150px;
-                    left: -500%;
-                    padding: 10px;
-                    border: 2px solid white;
-                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
-                     display: none; 
-                }
+        <!-- Hamburger Icon -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
 
-                .nav-links li:hover .dropdown-container {
-                    display: block; /* Show the container on hover */
-                }
+        <!-- Navigation Links (Desktop) -->
+        <ul id="menu" class="hidden md:flex items-center space-x-6 md:space-x-6 lg:space-x-8">
+            <li><a href="./index.html" class="text-white font-bold lg:text-2xl">Home</a></li>
+            <li><a href="#" class="text-white font-bold lg:text-2xl">About</a></li>
+            <li><a href="./services.html" class="text-white font-bold lg:text-2xl">Services</a></li>
+            <li><a href="./profile.html" class="text-white font-bold lg:text-2xl">Portfolio</a></li>
+            <li><a href="./contact_us.html" class="text-white font-bold lg:text-2xl">Contact Us</a></li>
+        </ul>
 
-                .container4{
-                    display: flex;
-                    flex-direction: column;
-                    margin: 20px;
-                    border-radius: 20px;
-                }
+        <a href="./contact_us.html" class="hidden md:block bg-transparent border-2 border-white text-white font-bold lg:text-xl py-3 px-6 rounded-full shadow-lg hover:bg-white hover:text-black transition">Get A Quote <i class="fas fa-arrow-right"></i></a>
+    </nav>
 
-                .row {
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 20px;
-                }
+    <!-- Side Drawer -->
+    <div id="drawer" class="fixed top-0 left-0 h-full w-64 bg-black text-white transform -translate-x-full transition-transform duration-300">
+        <ul class="flex flex-col items-start space-y-2 p-4">
+            <li><a href="./index.html" class="text-white font-bold lg:text-2xl">Home</a></li>
+            <li><a href="#" class="text-white font-bold lg:text-2xl">About</a></li>
+            <li><a href="./services.html" class="text-white font-bold lg:text-2xl">Services</a></li>
+            <li><a href="./profile.html" class="text-white font-bold lg:text-2xl">Portfolio</a></li>
+            <li><a href="./contact_us.html" class="text-white font-bold lg:text-2xl">Contact Us</a></li>
+        </ul>
+    </div>
 
-                .column {
-                    flex: 1;
-                    padding: 10px;
-                    background-color: #000000;
-                    text-align: left;
-                    border-radius: 20px;
-                    display: flex;
-                    align-items: center;
-                    transition: background-color 0.3s; /* Smooth transition for background color */
-                }
+    <!-- JavaScript for Drawer Toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const drawer = document.getElementById('drawer');
 
-                .column:hover {
-                    background-color: #caa4a4; /* Change to red or any color you prefer */
-                    color: white; /* Change text color to white for better contrast */
-                }
+        menuToggle.addEventListener('click', () => {
+            // Toggle drawer visibility
+            drawer.classList.toggle('-translate-x-full');
+        });
+    </script>
 
-                .column-image {
-                    width: 100px;
-                    height: 100px;
-                    margin-right: 10px;
-                }
+</body>
 
-                @media (max-width: 600px) {
-                    .row {
-                        flex-direction: column;
-                    }
-                }
-            </style>
-        
+</html>
