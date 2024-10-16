@@ -14,10 +14,91 @@
             color: #80e800;
         }
     </style>
+    <style>
+        .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
+            position: relative;
+        }
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            transform: rotate(0);
+            transition: all 0.5s;
+        }
+        .hamburger-middle {
+            transform: translateY(7px);
+        }
+        .hamburger-bottom {
+            transform: translateY(14px);
+        }
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translate(6px);
+        }
+        .open .hamburger-middle {
+            display: none;
+        }
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(6px) translate(-6px);
+        }
+        /* Mobile menu styles */
+        #mobile-menu {
+            max-height: 0; /* Start hidden */
+            overflow: hidden; /* Hide overflow */
+            transition: max-height 0.3s ease; /* Smooth transition */
+        }
+        #mobile-menu.open {
+            max-height: 200px; /* Adjust this value based on content */
+        }
+        .text-custom-green {
+    color: #80e800;
+    }
+    </style>
 </head>
 <body class="bg-black text-white">
-    <div id="navbar"></div>
-    
+    <nav class="flex items-center justify-between bg-black p-4 md:p-6 lg:p-8">
+        <a href="./index.html">
+            <div class="logo flex items-center">
+              <img src="./image/logo.png" alt="Logo" class="w-40 sm:w-32 md:w-32 lg:w-40" />
+            </div>
+        </a>
+        
+        <button id="menu-toggle" class="hamburger md:hidden focus:outline-none" type="button">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+        </button>
+
+        <!-- Navigation Links (Desktop) -->
+        <ul id="menu" class="hidden md:flex items-center space-x-6 md:space-x-6 lg:space-x-8">
+            <li><a href="./index.html" class="text-white font-bold lg:text-2xl ">Home</a></li>
+            <li><a href="#" class="text-white font-bold lg:text-2xl">About</a></li>
+            <li><a href="./services.html" class=" font-bold lg:text-2xl text-custom-green">Services</a></li>
+            <li><a href="./profile.html" class="text-white font-bold lg:text-2xl">Portfolio</a></li>
+            <li><a href="./contact_us.html" class="text-white font-bold lg:text-2xl">Contact Us</a></li>
+        </ul>
+
+        <a href="./contact_us.html" class="hidden md:block bg-transparent border-2 border-white text-white font-bold lg:text-xl py-3 px-6 rounded-full shadow-lg hover:bg-white hover:text-black transition">Get A Quote <i class="fas fa-arrow-right"></i></a>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-black  absolute right-0 top-16 w-full transition-max-height duration-300 z-50">
+        <ul class="flex flex-col items-start space-y-2 p-4">
+            <li><a href="./index.html" class=" font-bold text-white">Home</a></li>
+            <li><a href="#" class="text-white font-bold">About</a></li>
+            <li><a href="./services.html" class=" font-bold text-custom-green">Services</a></li>
+            <li><a href="./profile.html" class="text-white font-bold">Portfolio</a></li>
+            <li><a href="./contact_us.html" class="text-white font-bold">Contact Us</a></li>
+        </ul>
+    </div>
     <main class="container mx-auto px-4 py-8">
         <h1 class="text-5xl md:text-7xl font-bold mb-4 text-center">Website <span class="text-custom-green">Development</span></h1>
         <h2 class="text-xl md:text-3xl text-gray-400 mb-16 text-center" >Design your thoughts with a valid interface.</h2>
@@ -81,6 +162,18 @@
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;
             });
+    </script>
+     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+    
+            // Toggle mobile menu when the hamburger icon is clicked
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('open');
+                mobileMenu.classList.toggle('open'); // Add class to trigger height change
+            });
+        });
     </script>
 </body>
 </html>
