@@ -3,96 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/profile.css">
-    <link rel="stylesheet" href="./css/index1.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Website Development</title>
     <style>
-        .container {
-            display: flex;
-            margin-top: 300px;
-            justify-content: space-between;
-        }
-        .main-content {
-            flex: 2;
-            padding-right: 20px;
-        }
-        .sidebar {
-            flex: 1;
-            background-color: #1a1a1a;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        h1 {
-            font-size: 2.5em;
-        }
-        h2 {
-            color: #ffffff;
-        }
-        .highlight {
+        .text-custom-green {
             color: #80e800;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .tag {
-            background-color: #333333;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.9em;
-        }
-        .develop-dreams {
-            display: flex;
-            align-items: center;
-            margin-top: 100px; 
-            margin-bottom: 100px;
-        }
-        .develop-dreams-image {
-            flex: 1;
-            text-align: center;
-        }
-        .develop-dreams-content {
-            flex: 1;
-            padding-left: 40px;
-        }
-        .consultation-cta {
-            background-color: #1a1a1a;
-            border-radius: 15px;
-            padding: 30px;
-            margin-top: 100px;
-            margin-bottom: 100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .cta-content h2 {
-            color: white;
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-        .cta-content p {
-            color: #ffffffa6;
-            font-size: 18px;
-        }
-        .consult-button {
-            background-color: transparent;
-            color: white;
-            border: 2px solid white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .consult-button:hover {
-            background-color: white;
-            color: #1a1a1a;
+        .hover\:text-custom-green:hover {
+            color: #80e800;
         }
     </style>
     <script>
@@ -108,53 +27,64 @@
             });
     </script>
 </head>
-<body>
+<body class="bg-black text-white">
     <div id="navbar"></div>
     
-    <h1 style="color: white;font-size: 70px;margin-top: -10px; margin-bottom: 30px">Digital  <span class="green-text">Marketing</span></h1>
-    <h1 style="color: white;font-size: 30px;margin-top: -30px; margin-bottom: 90px"><span style="color: #ffffffa6;">Enhance your online visibility with an epic digital marketing strategy</span></h1>
-    <div class="container">
-        <div class="main-content">
-            <h1 style="font-size: 60px ; align-content: start;">The Key to Boosting Your Brand's <span class="highlight" style="font-size: 60px ;align-content: start; " >Online Presence</span></h1>
-            <p>With social media usage growing exponentially, understanding how to effectively market on these platforms is crucial for reaching your target audience and building brand awareness. Unfortunately, many marketers enter the digital and social media marketing world without fully comprehending the demands of this space. Don’t make the same mistake. </p>
-            <p>To help you get started with your social media marketing campaign, our specialists at Thrive (Leading Digital Marketing Company in Bhubaneswar) explain the various aspects of business-to-consumer (B2C) and business-to-business (B2B) social media marketing. Learn what social media marketing entails and how to effectively market on these platforms straight from the experts. Keep reading to discover valuable insights for your business.</p>
-        </div>
-        <div class="sidebar">
-            <h2>Features Benefits</h2>
-            <ul>
-                <li style="margin-bottom: 10px;font-size: 20px;font-weight: 700;color: #ffffffb0; "><span style="color: #80e800; ">✓</span>   Continuous Improvement</li>
-                <li style="margin-bottom: 10px;font-size: 20px;font-weight: 700;color: #ffffffb0; "><span style="color: #80e800; ">✓</span>   Streamlined Processes</li>
-                <li style="margin-bottom: 10px;font-size: 20px;font-weight: 700;color: #ffffffb0; "><span style="color: #80e800; ">✓</span>   Value-added Services</li>
-                <li style="margin-bottom: 10px;font-size: 20px;font-weight: 700;color: #ffffffb0; "><span style="color: #80e800; ">✓</span>   Tailored Solutions</li>
-                <li style="margin-bottom: 10px;font-size: 20px;font-weight: 700;color: #ffffffb0; "><span style="color: #80e800; ">✓</span>   Delivery On Time</li>
-                <li style="margin-bottom: 10px;font-size: 20px;font-weight: 700;color: #ffffffb0; "><span style="color: #80e800; ">✓</span>   24 × 7 Support</li>
-            </ul>
-            <h2 style="margin-top: 50px;">Suggest For</h2>
-            <div class="tags">
-                <span class="tag">#Smallsizebusiness</span>
-                <span class="tag">#GrowingCompanies</span>
-                <span class="tag">#MidsizeCompanies</span>
-                <span class="tag">#Established Businesses</span>
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-5xl md:text-7xl font-bold text-center mb-8">Digital <span class="text-custom-green">Marketing</span></h1>
+        <h2 class="text-xl md:text-3xl text-gray-400 mb-16 text-center">Enhance your online visibility with an epic digital marketing strategy  
+        </h2>
+
+        <div class="flex flex-col lg:flex-row gap-8 mb-16">
+            <div class="lg:w-2/3">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 text-center leading-tight">
+                    The Key to Boosting Your Brand's  <span class="text-custom-green">Online Presence</span>
+                </h1>
+                <p class="mb-4 leading-relaxed">
+                    With social media usage growing exponentially, understanding how to effectively market on these platforms is crucial for reaching your target audience and building brand awareness. Unfortunately, many marketers enter the digital and social media marketing world without fully comprehending the demands of this space. Don’t make the same mistake.</p>
+                <p class="mb-4 leading-relaxed">
+                    To help you get started with your social media marketing campaign, our specialists at Agnoz  explain the various aspects of business-to-consumer (B2C) and business-to-business (B2B) social media marketing. Learn what social media marketing entails and how to effectively market on these platforms straight from the experts. Keep reading to discover valuable insights for your business.</p>
+            </div>
+            
+            <div class="lg:w-1/3 bg-gray-900 p-6 rounded-lg" style="background-color: #1a1a1a;">
+                <h2 class="text-2xl font-bold mb-4">Features Benefits</h2>
+                <ul class="space-y-2">
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> Continuous Improvement</li>
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> Streamlined Processes</li>
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> Value-added Services</li>
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> Tailored Solutions</li>
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> Delivery On Time</li>
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> 24 × 7 Support</li>
+                </ul>
+                <h2 class="text-2xl font-bold mt-8 mb-4">Suggest For</h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-800 px-3 py-1 rounded-full text-sm" style="background-color: #333333;">#Smallsizebusiness</span>
+                    <span class="bg-gray-800 px-3 py-1 rounded-full text-sm" style="background-color: #333333;">#GrowingCompanies</span>
+                    <span class="bg-gray-800 px-3 py-1 rounded-full text-sm" style="background-color: #333333;">#MidsizeCompanies</span>
+                    <span class="bg-gray-800 px-3 py-1 rounded-full text-sm" style="background-color: #333333;">#Established Businesses</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="develop-dreams">
-        <div class="develop-dreams-image">
-            <img src="/api/placeholder/400/300" alt="Web Development Illustration">
+        <div class="flex flex-col md:flex-row items-center gap-8 mb-16">
+            <div class="md:w-1/2">
+                <img src="/api/placeholder/400/300" alt="Web Development Illustration" class="w-full h-auto rounded-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Unique promotion with <span class="text-custom-green">unique features</span></h2>
+                <p class="mb-4">Looking to boost your brand’s visibility, attract new customers, and drive traffic to your website? Look no further than social media! Our social media marketing service can help you establish a strong presence on these platforms and achieve your business goals. Don’t wait any longer, contact us today to get started.</p>
+            </div>
         </div>
-        <div class="develop-dreams-content">
-            <h2>Unique promotion with<span class="highlight">unique features</span></h2>
-            <p>Looking to boost your brand’s visibility, attract new customers, and drive traffic to your website? Look no further than social media! Our social media marketing service can help you establish a strong presence on these platforms and achieve your business goals. Don’t wait any longer, contact us today to get started.</p>
+    </main>
+
+    <div class="bg-[#1a1a1a] rounded-lg p-8 flex flex-col md:flex-row justify-between items-center gap-4" style="background-color: #1a1a1a;">
+        <div>
+            <h2 class="text-3xl font-bold mb-2">Get Free Consultation Now!</h2>
+            <p class="text-gray-400">Let's create a powerful website that grows with your business.</p>
         </div>
+        <button class="bg-transparent border-2 border-white text-white px-6 py-2 rounded-full text-lg hover:bg-white hover:text-custom-green transition duration-300">Consult Now →</button>
     </div>
-    <div class="consultation-cta">
-        <div class="cta-content">
-            <h2>Get Free Consultation Now!</h2>
-            <p>Let's create a powerful website that grows with your business.</p>
-        </div>
-        <button class="consult-button">Consult Now →</button>
-    </div>
-    <div id="footer" style="margin-top: 100px;"></div>
+    
+    <div id="footer" class="mt-16"></div>
 </body>
 </html>
