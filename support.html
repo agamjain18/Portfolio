@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Website Development</title>
+    <style>
+        .text-custom-green {
+            color: #80e800;
+        }
+        .hover\:text-custom-green:hover {
+            color: #80e800;
+        }
+    </style>
+    <script>
+        fetch('./footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+        fetch('./navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+</head>
+<body class="bg-black text-white">
+    <div id="navbar"></div>
+    
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-5xl md:text-7xl font-bold text-center mb-8">Support</h1>
+        <div class="flex flex-col lg:flex-row gap-8 mb-16">
+            <div class="lg:w-2/3">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 text-center leading-tight">
+                    Get the Help You Need with <span class="text-custom-green">Agnoz</span>
+                </h1>
+                <p class="mb-4 leading-relaxed">
+                    At Agnoz, we understand the importance of having reliable support when you need it. That’s why we offer expert support for all of our website design services. Our team of experienced professionals is always available to answer your questions, troubleshoot issues, and help you make the most of your website.</p>                
+                    <p class="mb-4 leading-relaxed">
+                    Whether you need technical assistance, guidance on website design best practices, or simply have a question about our services, we’re here to help. We take pride in our commitment to providing top-notch support to our clients, and we’re always striving to exceed your expectations.</p>            </div>
+            
+            <div class="lg:w-1/3 bg-gray-900 p-6 rounded-lg" style="background-color: #1a1a1a;">
+                <h2 class="text-2xl font-bold mb-4">Features Benefits</h2>
+                <ul class="space-y-2">
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> Continuous Improvement</li>
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> Streamlined Processes</li>
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> Value-added Services</li>
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> Tailored Solutions</li>
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> Delivery On Time</li>
+                    <li class="text-lg text-gray-300"><span class="text-custom-green">✓</span> 24 × 7 Support</li>
+                </ul>
+                <h2 class="text-2xl font-bold mt-8 mb-4">Suggest For</h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-800 px-3 py-1 rounded-full text-sm" style="background-color: #333333;">#Smallsizebusiness</span>
+                    <span class="bg-gray-800 px-3 py-1 rounded-full text-sm" style="background-color: #333333;">#GrowingCompanies</span>
+                    <span class="bg-gray-800 px-3 py-1 rounded-full text-sm" style="background-color: #333333;">#MidsizeCompanies</span>
+                    <span class="bg-gray-800 px-3 py-1 rounded-full text-sm" style="background-color: #333333;">#Established Businesses</span>
+                </div>
+            </div>
+        </div>
+
+       
+    </main>
+
+    <div class="bg-[#1a1a1a] rounded-lg p-8 flex flex-col md:flex-row justify-between items-center gap-4" style="background-color: #1a1a1a;">
+        <div>
+            <h2 class="text-3xl font-bold mb-2">Get Free Consultation Now!</h2>
+            <p class="text-gray-400">Let's create a powerful website that grows with your business.</p>
+        </div>
+        <button class="bg-transparent border-2 border-white text-white px-6 py-2 rounded-full text-lg hover:bg-white hover:text-custom-green transition duration-300">Consult Now →</button>
+    </div>
+    
+    <div id="footer" class="mt-16"></div>
+</body>
+</html>
