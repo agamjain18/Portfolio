@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APP DEVELOPMENT</title>
+    <title>WEBSITE DEVELOPMENT</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -63,7 +63,7 @@
     }
     </style>
 </head>
-<body class="bg-black text-white font-sans leading-relaxed">
+<body class="bg-black text-white">
     <nav class="flex items-center justify-between bg-black p-4 md:p-6 lg:p-8">
         <a href="./index.html">
             <div class="logo flex items-center">
@@ -98,17 +98,16 @@
             <li><a href="./profile.html" class="text-white font-bold">Portfolio</a></li>
             <li><a href="./contact_us.html" class="text-white font-bold">Contact Us</a></li>
         </ul>
-    </div>    
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-        <h1 class="text-5xl md:text-7xl font-bold mb-4 text-center">App <span class="text-custom-green">Development</span></h1>
-        <h2 class="text-xl md:text-3xl text-gray-400 mb-16 text-center">Convert your ideas into a live application with Agnoz app development services</h2>
+    </div>
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4 text-center">Domain &<span class="text-custom-green"> Hosting</span></h1>
+        <h2 class="text-xl md:text-3xl text-gray-400 mb-16 text-center" >Design your thoughts with a valid Domain.</h2>
 
         <div class="flex flex-col lg:flex-row gap-8 mb-16" >
             <div class="lg:w-2/3">
-                <h2 class="text-4xl md:text-6xl font-bold mb-4 text-center">Creative Solutions for <span class="text-custom-green">Your Business</span></h2>
-                <p class="mb-4">At Agnozt, our team of experienced app developers is here to guide you through the App Development process, from brainstorming ideas to launching your app in the app store. We understand that creating an app can be a difficult task, but with our expertise, we can help make the process smoother and less stressful.</p>
-
-                   <p> We have specialized in developing both iOS and Android applications. Our team is well-versed in the latest technology and trends, ensuring that your app is up-to-date and user-friendly. We also offer custom app development services, ensuring that your app is tailored to your specific needs and requirements.</p>
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">Creative Solutions for <span class="text-custom-green">Your Business</span></h2>
+                <p class="mb-4">At Agnoz, we understand that reliable domain and hosting services are the backbone of a successful online presence. Your domain is your digital identity, and the hosting infrastructure is what keeps your website running smoothly 24/7. That's why we take the time to understand your specific needs and offer tailored solutions that ensure speed, security, and scalability.</p>
+                <p>Our domain and hosting services are designed to cater to businesses of all sizes. We start by assisting you in choosing the right domain name that aligns with your brand and is easy for your audience to remember. Our hosting solutions offer maximum uptime, robust security features, and seamless scalability, allowing your website to grow as your business expands. Whether you need shared hosting, VPS, or dedicated servers, we provide the right environment for your website to thrive.</p>
             </div>
             <div class="lg:w-1/3 bg-gray-900 p-6 rounded-lg" style="background-color: #1a1a1a;">
                 <h2 class="text-2xl font-bold mb-4">Features Benefits</h2>
@@ -132,14 +131,15 @@
 
         <div class="flex flex-col md:flex-row items-center gap-8 mb-16" >
             <div class="md:w-1/2">
-                <img src="./image/download1.svg" alt="Web Development Illustration" class="w-full h-auto rounded-lg">
+                <img src="./image/Layer@4x.png" alt="Web Development Illustration" class=" rounded-lg">
             </div>
             <div class="md:w-1/2">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Develop your dreams <span class="text-custom-green">digitally</span></h2>
-                <p>Our service doesn’t stop there. We offer ongoing support and maintenance services for the app development process to ensure that your app is running smoothly and efficiently. We also offer marketing services to help promote your app and increase visibility in the app store.</p>
+                <p>At Agnoz, we are dedicated to delivering outstanding service and support for all your domain and hosting needs. We believe clear communication is crucial, so we keep you informed every step of the way. Our aim is to provide a hosting solution that not only meets your expectations but goes above and beyond, ensuring your website performs at its best with maximum reliability and security.</p>
             </div>
         </div>
 
+        
         
     </main>
     <div class="bg-[#1a1a1a] rounded-lg p-8 flex flex-col md:flex-row justify-between items-center gap-4"style="background-color: #1a1a1a;">
@@ -149,7 +149,7 @@
         </div>
         <button class="bg-transparent border-2 border-white text-white px-6 py-2 rounded-full text-lg hover:bg-white hover:text-custom-green transition duration-300">Consult Now →</button>
     </div>
-    <div id="footer" class="mt-24"></div>
+    <div id="footer" class="mt-16"></div>
 
     <script>
         fetch('./footer.html')
@@ -163,7 +163,7 @@
                 document.getElementById('navbar').innerHTML = data;
             });
     </script>
-    <script>
+     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuToggle = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
