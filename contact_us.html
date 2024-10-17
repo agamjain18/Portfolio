@@ -69,7 +69,7 @@
     }
     </style>
 </head>
-<body>
+<body class="bg-black text-white">
     <nav class="flex items-center justify-between bg-black p-4 md:p-6 lg:p-8">
         <a href="./index.html">
             <div class="logo flex items-center">
@@ -99,97 +99,129 @@
     <div id="mobile-menu" class="md:hidden bg-black  absolute right-0 top-16 w-full transition-max-height duration-300 z-50">
         <ul class="flex flex-col items-start space-y-2 p-4">
             <li><a href="./index.html" class=" font-bold text-white">Home</a></li>
-            <li><a href="#" class="text-white font-bold">About</a></li>
+            <li><a href="./about_us.html" class="text-white font-bold">About</a></li>
             <li><a href="./services.html" class="text-white font-bold ">Services</a></li>
             <li><a href="./profile.html" class="text-white font-bold">Portfolio</a></li>
             <li><a href="./contact_us.html" class="text-custom-green font-bold">Contact Us</a></li>
         </ul>
     </div> 
     
-        <h1 style="color: white;font-size: 70px;margin-top: -10px; margin-bottom: 30px">Contact <span class="orange-text">Us</span></h1>
-      
-    <section class="our-work"  style="margin-left: 100px;margin-right: 100px;">
-        <h1 style="color: white; font-size: 30px;margin-top: -2%;">Our Contact <span class="orange-text">Information</span></h1>
-        <div class="work-grid">
-            <div class="work-item" style="height:200px; align-items: center;">
-                <div class="info-item">
-                    <div class="icon" style="margin-bottom: 25px; margin-top: 1%; font-size: 40px;"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="info-title green-text" style="font-size: 30px;">Address</div>
-                    <div class="info-content"> </div>
+    <h1 class="text-white text-center font-bold text-5xl mt-[-10px] mb-20 ">
+        Contact <span class="text-custom-green">Us</span>
+    </h1>
+    
+    <section class="mx-2 mt-10 p-2 xl:ml-8 xl:mr-8 sm:ml-4 rounded-xl " style="background-color: #1a1a1a;">
+        <h1 class="text-white text-center font-bold text-4xl mt-[-2%]">
+            Our Contact <span class="text-custom-green">Information</span>
+        </h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-xl mx-4 mb-10   gap-8 mt-8">
+            <div class="flex flex-col items-center h-52  rounded-xl p-6" style="background-color: #272525;" >
+                <div class="text-4xl text-custom-green mb-6 mt-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="text-2xl text-custom-green">Address</div>
+                <div class="info-content">322 Usha Nagar,Ext Indore (M.P.) </div>
+            </div>
+            
+            <div class="flex flex-col items-center h-52 bg-gray-800 rounded-xl p-6" style="background-color: #272525;">
+                <div class="text-4xl text-custom-green mb-6 mt-[-30%]">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="text-2xl text-custom-green">Phone</div>
+                <div class="info-content">
+                    <div class="info-content row"> 
+                        <p>+91 8989065870</p>
+                        <p>+91 9869836003</p>
+                    </div>
                 </div>
             </div>
-            <div class="work-item" style="height:200px; align-items: center;">
-                <div class="info-item">
-                    <div class="icon" style="margin-bottom: 25px; margin-top: -30%; font-size: 40px;"><i class="fas fa-phone-alt"></i></div>
-                    <div class="info-title"style="font-size: 30px;">Phone</div>
-                    <div class="info-content"> </div>
+            
+            <div class="flex flex-col items-center h-52 bg-gray-800 rounded-xl p-6" style="background-color: #272525;">
+                <div class="text-4xl text-custom-green mb-6 mt-[-20%]">
+                    <i class="fas fa-envelope"></i>
                 </div>
+                <div class="text-2xl text-custom-green">Email</div>
+                <div class="info-content"></div>
             </div>
-            <div class="work-item" style="height:200px; align-items: center;">
-                <div class="info-item">
-                    <div class="icon" style="margin-bottom: 25px; margin-top: -20%; font-size: 40px;"><i class="fas fa-envelope"></i></div>
-                    <div class="info-title"style="font-size: 30px;">Email</div>
-                    <div class="info-content"> </div>
+        </div>
+    </section>
+    
+    <section class="mx-2 rounded-xl mt-10 p-4 xl:ml-8 xl:mr-8 sm:ml-4" style="background-color: #1a1a1a;">
+ 
+            
+            <div class="form-wrapper mt-12" >
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                
+                <!-- Map Section -->
+                <div class="w-full h-96 mt-20 rounded-lg flex justify-center items-center hidden lg:flex">
+                    <!-- Placeholder for Map -->
+                    <img src="./image/logo.png" alt="Map" class="rounded-lg">
+                </div>
+                
+        
+                <!-- Form Section -->
+                <div>
+                    <form class="mt-8">
+                        <h1 class="text-white font-bold text-4xl mb-10">Let's <span class="text-custom-green">Talk</span></h1>
+        
+                        <div class="form-row grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                            <div class="form-col">
+                                <input type="text" placeholder="Enter Your Name" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
+                            </div>
+                        </div>
+        
+                        <div class="form-row grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                            <div class="form-col phone-input flex">
+                                <select class="p-3 bg-black text-white rounded-l-lg border border-gray-300 focus:outline-none">
+                                    <option value="+91">+91</option>
+                                </select>
+                                <input type="tel" placeholder="Enter Your Phone No" class="w-full p-3 bg-black text-white rounded-r-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
+                            </div>
+                        </div>
+        
+                        <div class="form-row grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                            <div class="form-col">
+                                <input type="email" placeholder="Email" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
+                            </div>
+                            <div class="form-col">
+                                <select class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
+                                    <option value="Web_Design_&amp;_Development">Web Design &amp; Development</option>
+                                    <option value="Website_Redesign">Website Redesign</option>
+                                    <option value="Website_Maintenance">Website Maintenance</option>
+                                    <option value="App Development">App Development</option>
+                                    <option value="Digital_Marketing">Digital Marketing</option>
+                                    <option value="Branding">Branding</option>
+                                    <option value="Graphic_Design">Graphic Design</option>
+                                    <option value="Customize_Software_Solution">Customize Software Solution</option>
+                                </select>
+                            </div>
+                        </div>
+        
+                        <div class="form-row grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                            <div class="form-col">
+                                <input type="text" placeholder="Business do you have?" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
+                            </div>
+                            <div class="form-col">
+                                <input type="text" placeholder="You are from?" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
+                            </div>
+                        </div>
+        
+                        <div class="form-row mb-6">
+                            <div class="form-col">
+                                <textarea placeholder="Give a short description, what you want from us." class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green"></textarea>
+                            </div>
+                        </div>
+        
+                        <button type="submit" class="mt-8 bg-transparent text-white font-bold border-2 border-white rounded-full py-3 px-6 hover:bg-white hover:text-black transition duration-300">
+                            Submit
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-
-    <div class="form-wrapper" style="margin-top: 50px;">
-        <div class="map-container">
-            <!-- Map would go here -->
-        </div>
-        <form>
-            <h1 style="color: white; font-size: 40px; margin-top: -25%;margin-bottom: 10%;">Let's <span class="highlight">Talk</span></h1>
-
-            <div class="form-row">
-                <div class="form-col">
-                    <input type="text" placeholder="Enter Your Name">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-col phone-input">
-                    <select>
-                        <option value="+91">+91</option>
-                    </select>
-                    <input type="tel" placeholder="Enter Your Phone No">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-col">
-                    <input type="email" placeholder="Email">
-                </div>
-                <div class="form-col">
-                    <select>
-                        <option value="Web_Design_&amp;_Development">Web Design &amp; Development</option>
-                        <option value="Website_Redesign">Website Redesign</option>
-                        <option value="Website_Maintenance">Website Maintenance</option>
-                        <option value="App Development">App Development</option>
-                        <option value="Digital_Marketing">Digital Marketing</option>
-                        <option value="Branding">Branding</option>
-                        <option value="Graphic_Design">Graphic Design</option>
-                        <option value="Customize_Software_Solution">Customize Software Solution</option>                    </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-col">
-                    <input type="text" placeholder="Business do you have ?">
-                </div>
-                <div class="form-col">
-                    <input type="text" placeholder="You are from ?">
-                </div>
-            </div>
-            
-            <div class="form-row">
-                <div class="form-col">
-                    <textarea placeholder="Give a short description,what you want from us."></textarea>
-                </div>
-            </div>
-            <button type="submit" style="margin-top: 30px; background-color: rgba(255, 255, 255, 0); font-size: 20px; color: white; font-weight: bold; border: 2px solid white; border-radius: 20px; padding: 10px 20px;">
-                Submit
-            </button>
-                    </form>
-    </div>
+    
+    
     <div id="footer" style="margin-top: 100px;"></div>
 
     <script>
