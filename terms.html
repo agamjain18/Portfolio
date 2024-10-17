@@ -7,6 +7,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Website Development</title>
     <style>
+                .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
+            position: relative;
+        }
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            transform: rotate(0);
+            transition: all 0.5s;
+        }
+        .hamburger-middle {
+            transform: translateY(7px);
+        }
+        .hamburger-bottom {
+            transform: translateY(14px);
+        }
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translate(6px);
+        }
+        .open .hamburger-middle {
+            display: none;
+        }
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(6px) translate(-6px);
+        }
+        /* Mobile menu styles */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        #mobile-menu.open {
+            max-height: 200px;
+        }
         .text-custom-green {
             color: #80e800;
         }
@@ -28,15 +71,57 @@
     </script>
 </head>
 <body class="bg-black text-white">
-    <div id="navbar"></div>
+    <nav class="flex items-center justify-between bg-black p-4 md:p-6 lg:p-8">
+        <a href="./index.html">
+            <div class="logo flex items-center">
+              <img src="./image/logo.png" alt="Logo" class="w-40 sm:w-32 md:w-32 lg:w-40" />
+            </div>
+        </a>
+        
+        <button id="menu-toggle" class="hamburger md:hidden focus:outline-none" type="button">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+        </button>
+
+        <!-- Navigation Links (Desktop) -->
+        <ul id="menu" class="hidden md:flex items-center space-x-6 md:space-x-6 lg:space-x-8">
+            <li><a href="./index.html" class="text-white font-bold lg:text-2xl">Home</a></li>
+            <li><a href="#" class="text-white font-bold lg:text-2xl">About</a></li>
+            <li><a href="./services.html" class="font-bold lg:text-2xl text-white">Services</a></li>
+            <li><a href="./profile.html" class="text-white font-bold lg:text-2xl">Portfolio</a></li>
+            <li><a href="./contact_us.html" class="text-white font-bold lg:text-2xl">Contact Us</a></li>
+        </ul>
+
+        <a href="./contact_us.html" class="hidden md:block bg-transparent border-2 border-white text-white font-bold lg:text-xl py-3 px-6 rounded-full shadow-lg hover:bg-white hover:text-black transition">Get A Quote <i class="fas fa-arrow-right"></i></a>
+    </nav>
+    <div id="mobile-menu" class="md:hidden bg-black absolute right-0 top-16 w-full transition-max-height duration-300 z-50">
+        <ul class="flex flex-col items-start space-y-2 p-4">
+            <li><a href="./index.html" class="font-bold text-white">Home</a></li>
+            <li><a href="#" class="text-white font-bold">About</a></li>
+            <li><a href="./services.html" class="font-bold text-white">Services</a></li>
+            <li><a href="./profile.html" class="text-white font-bold">Portfolio</a></li>
+            <li><a href="./contact_us.html" class="text-white font-bold">Contact Us</a></li>
+        </ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
     
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+            });
+        });
+    </script>         
     <main class="container mx-auto px-4 py-8">
         <h1 class="text-3xl md:text-5xl font-bold text-center mb-8">Terms and <span class="text-custom-green">Conditions</span></h1>
         
-        <div class="space-y-6 text-gray-300">
+        <div class="space-y-6 text-gray-300 mx-auto lg:ml-40 lg:mr-40 px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Introduction</h2>
             <p>
-                These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Thinkweb Hub accessible at <a href="https://thinkwebhub.com" class="text-custom-green hover:underline">https://thinkwebhub.com</a>.
+                These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Agnoz accessible at <a href="https://agnoz.com" class="text-custom-green hover:underline">https://agnoz.com</a>.
             </p>
             <p>
                 These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions. These Terms and Conditions have been generated with the help of the Terms And Conditions Sample Generator.
@@ -47,7 +132,7 @@
 
             <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Intellectual Property Rights</h2>
             <p>
-                Other than the content you own, under these Terms, Thinkweb Hub and/or its licensors own all the intellectual property rights and materials contained in this Website.
+                Other than the content you own, under these Terms, Agnoz and/or its licensors own all the intellectual property rights and materials contained in this Website.
             </p>
             <p>
                 You are granted limited license only for purposes of viewing the material contained on this Website.
@@ -66,30 +151,30 @@
                 <li>using this Website to engage in any advertising or marketing.</li>
             </ul>
             <p>
-                Certain areas of this Website are restricted from being access by you and Thinkweb Hub may further restrict access by you to any areas of this Website, at any time, in absolute discretion. Any user ID and password you may have for this Website are confidential and you must maintain confidentiality as well.
+                Certain areas of this Website are restricted from being access by you and Agnoz may further restrict access by you to any areas of this Website, at any time, in absolute discretion. Any user ID and password you may have for this Website are confidential and you must maintain confidentiality as well.
             </p>
 
             <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Your Content</h2>
             <p>
-                In these Website Standard Terms and Conditions, "Your Content" shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant Thinkweb Hub a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.
+                In these Website Standard Terms and Conditions, "Your Content" shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant Agnoz a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.
             </p>
             <p>
-                Your Content must be your own and must not be invading any third-party's rights. Thinkweb Hub reserves the right to remove any of Your Content from this Website at any time without notice.
+                Your Content must be your own and must not be invading any third-party's rights. Agnoz reserves the right to remove any of Your Content from this Website at any time without notice.
             </p>
 
             <h2 class="text-2xl font-bold mt-8 mb-4 text-white">No warranties</h2>
             <p>
-                This Website is provided "as is," with all faults, and Thinkweb Hub express no representations or warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing contained on this Website shall be interpreted as advising you.
+                This Website is provided "as is," with all faults, and Agnoz express no representations or warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing contained on this Website shall be interpreted as advising you.
             </p>
 
             <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Limitation of liability</h2>
             <p>
-                In no event shall Thinkweb Hub, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract. Thinkweb Hub, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.
+                In no event shall Agnoz, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract. Agnoz, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.
             </p>
 
             <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Indemnification</h2>
             <p>
-                You hereby indemnify to the fullest extent Thinkweb Hub from and against any and/or all liabilities, costs, demands, causes of action, damages and expenses arising in any way related to your breach of any of the provisions of these Terms.
+                You hereby indemnify to the fullest extent Agnoz from and against any and/or all liabilities, costs, demands, causes of action, damages and expenses arising in any way related to your breach of any of the provisions of these Terms.
             </p>
 
             <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Severability</h2>
@@ -99,17 +184,17 @@
 
             <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Variation of Terms</h2>
             <p>
-                Thinkweb Hub is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis.
+                Agnoz is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis.
             </p>
 
             <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Assignment</h2>
             <p>
-                The Thinkweb Hub is allowed to assign, transfer, and subcontract its rights and/or obligations under these Terms without any notification. However, you are not allowed to assign, transfer, or subcontract any of your rights and/or obligations under these Terms.
+                The Agnoz is allowed to assign, transfer, and subcontract its rights and/or obligations under these Terms without any notification. However, you are not allowed to assign, transfer, or subcontract any of your rights and/or obligations under these Terms.
             </p>
 
             <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Entire Agreement</h2>
             <p>
-                These Terms constitute the entire agreement between Thinkweb Hub and you in relation to your use of this Website, and supersede all prior agreements and understandings.
+                These Terms constitute the entire agreement between Agnoz and you in relation to your use of this Website, and supersede all prior agreements and understandings.
             </p>
 
             <h2 class="text-2xl font-bold mt-8 mb-4 text-white">Governing Law & Jurisdiction</h2>

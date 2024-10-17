@@ -7,6 +7,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Website Development</title>
     <style>
+        .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
+            position: relative;
+        }
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            transform: rotate(0);
+            transition: all 0.5s;
+        }
+        .hamburger-middle {
+            transform: translateY(7px);
+        }
+        .hamburger-bottom {
+            transform: translateY(14px);
+        }
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translate(6px);
+        }
+        .open .hamburger-middle {
+            display: none;
+        }
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(6px) translate(-6px);
+        }
+        /* Mobile menu styles */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        #mobile-menu.open {
+            max-height: 200px;
+        }
         .text-custom-green {
             color: #80e800;
         }
@@ -28,19 +71,66 @@
     </script>
 </head>
 <body class="bg-black text-white">
-    <div id="navbar"></div>
+    <nav class="flex items-center justify-between bg-black p-4 md:p-6 lg:p-8">
+        <a href="./index.html">
+            <div class="logo flex items-center">
+              <img src="./image/logo.png" alt="Logo" class="w-40 sm:w-32 md:w-32 lg:w-40" />
+            </div>
+        </a>
+        
+        <button id="menu-toggle" class="hamburger md:hidden focus:outline-none" type="button">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+        </button>
+
+        <!-- Navigation Links (Desktop) -->
+        <ul id="menu" class="hidden md:flex items-center space-x-6 md:space-x-6 lg:space-x-8">
+            <li><a href="./index.html" class="text-white font-bold lg:text-2xl">Home</a></li>
+            <li><a href="#" class="text-white font-bold lg:text-2xl">About</a></li>
+            <li><a href="./services.html" class="font-bold lg:text-2xl text-white">Services</a></li>
+            <li><a href="./profile.html" class="text-white font-bold lg:text-2xl">Portfolio</a></li>
+            <li><a href="./contact_us.html" class="text-white font-bold lg:text-2xl">Contact Us</a></li>
+        </ul>
+
+        <a href="./contact_us.html" class="hidden md:block bg-transparent border-2 border-white text-white font-bold lg:text-xl py-3 px-6 rounded-full shadow-lg hover:bg-white hover:text-black transition">Get A Quote <i class="fas fa-arrow-right"></i></a>
+    </nav>
+    <div id="mobile-menu" class="md:hidden bg-black absolute right-0 top-16 w-full transition-max-height duration-300 z-50">
+        <ul class="flex flex-col items-start space-y-2 p-4">
+            <li><a href="./index.html" class="font-bold text-white">Home</a></li>
+            <li><a href="#" class="text-white font-bold">About</a></li>
+            <li><a href="./services.html" class="font-bold text-white">Services</a></li>
+            <li><a href="./profile.html" class="text-white font-bold">Portfolio</a></li>
+            <li><a href="./contact_us.html" class="text-white font-bold">Contact Us</a></li>
+        </ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
     
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+            });
+        });
+    </script>    
     <main class="container mx-auto px-4 py-8">
         <h1 class="text-5xl md:text-7xl font-bold text-center mb-8">Support</h1>
-        <div class="flex flex-col lg:flex-row gap-8 mb-16">
-            <div class="lg:w-2/3">
-                <h1 class="text-5xl md:text-7xl font-bold mb-4 text-center leading-tight">
+        <div class="flex flex-col lg:flex-row gap-8 mb-16 px-4 md:px-12 lg:px-40 mt-20">
+            <div class="lg:w-2/3  lg:text-left">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-snug text-center">
                     Get the Help You Need with <span class="text-custom-green">Agnoz</span>
                 </h1>
+                
                 <p class="mb-4 leading-relaxed">
-                    At Agnoz, we understand the importance of having reliable support when you need it. That’s why we offer expert support for all of our website design services. Our team of experienced professionals is always available to answer your questions, troubleshoot issues, and help you make the most of your website.</p>                
-                    <p class="mb-4 leading-relaxed">
-                    Whether you need technical assistance, guidance on website design best practices, or simply have a question about our services, we’re here to help. We take pride in our commitment to providing top-notch support to our clients, and we’re always striving to exceed your expectations.</p>            </div>
+                    At Agnoz, we understand the importance of having reliable support when you need it. That’s why we offer expert support for all of our website design services. Our team of experienced professionals is always available to answer your questions, troubleshoot issues, and help you make the most of your website.
+                </p>                
+                <p class="mb-4 leading-relaxed">
+                    Whether you need technical assistance, guidance on website design best practices, or simply have a question about our services, we’re here to help. We take pride in our commitment to providing top-notch support to our clients, and we’re always striving to exceed your expectations.
+                </p>
+            </div>
+        
             
             <div class="lg:w-1/3 bg-gray-900 p-6 rounded-lg" style="background-color: #1a1a1a;">
                 <h2 class="text-2xl font-bold mb-4">Features Benefits</h2>
@@ -62,17 +152,17 @@
             </div>
         </div>
 
-       
-    </main>
-
-    <div class="bg-[#1a1a1a] rounded-lg p-8 flex flex-col md:flex-row justify-between items-center gap-4" style="background-color: #1a1a1a;">
-        <div>
-            <h2 class="text-3xl font-bold mb-2">Get Free Consultation Now!</h2>
-            <p class="text-gray-400">Let's create a powerful website that grows with your business.</p>
+        <div class="bg-[#1a1a1a] rounded-lg p-8 flex flex-col md:flex-row justify-between items-center gap-4" style="background-color: #1a1a1a;">
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl font-bold mb-2">Get Free Consultation Now!</h2>
+                <p class="text-gray-400">Let's create a powerful website that grows with your business.</p>
+            </div>
+            <button class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition">
+                Book A Meeting
+            </button>
         </div>
-        <button class="bg-transparent border-2 border-white text-white px-6 py-2 rounded-full text-lg hover:bg-white hover:text-custom-green transition duration-300">Consult Now →</button>
-    </div>
-    
-    <div id="footer" class="mt-16"></div>
+    </main>
+        <div id="footer" style="margin-top: 100px;"></div>
+
 </body>
 </html>
