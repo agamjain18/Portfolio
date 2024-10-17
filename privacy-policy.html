@@ -7,6 +7,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Website Development</title>
     <style>
+                .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
+            position: relative;
+        }
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            transform: rotate(0);
+            transition: all 0.5s;
+        }
+        .hamburger-middle {
+            transform: translateY(7px);
+        }
+        .hamburger-bottom {
+            transform: translateY(14px);
+        }
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translate(6px);
+        }
+        .open .hamburger-middle {
+            display: none;
+        }
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(6px) translate(-6px);
+        }
+        /* Mobile menu styles */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        #mobile-menu.open {
+            max-height: 200px;
+        }
         .text-custom-green {
             color: #80e800;
         }
@@ -28,12 +71,54 @@
     </script>
 </head>
 <body class="bg-black text-white">
-   
+    <nav class="flex items-center justify-between bg-black p-4 md:p-6 lg:p-8">
+        <a href="./index.html">
+            <div class="logo flex items-center">
+              <img src="./image/logo.png" alt="Logo" class="w-40 sm:w-32 md:w-32 lg:w-40" />
+            </div>
+        </a>
+        
+        <button id="menu-toggle" class="hamburger md:hidden focus:outline-none" type="button">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+        </button>
+
+        <!-- Navigation Links (Desktop) -->
+        <ul id="menu" class="hidden md:flex items-center space-x-6 md:space-x-6 lg:space-x-8">
+            <li><a href="./index.html" class="text-white font-bold lg:text-2xl">Home</a></li>
+            <li><a href="#" class="text-white font-bold lg:text-2xl">About</a></li>
+            <li><a href="./services.html" class="font-bold lg:text-2xl text-white">Services</a></li>
+            <li><a href="./profile.html" class="text-white font-bold lg:text-2xl">Portfolio</a></li>
+            <li><a href="./contact_us.html" class="text-white font-bold lg:text-2xl">Contact Us</a></li>
+        </ul>
+
+        <a href="./contact_us.html" class="hidden md:block bg-transparent border-2 border-white text-white font-bold lg:text-xl py-3 px-6 rounded-full shadow-lg hover:bg-white hover:text-black transition">Get A Quote <i class="fas fa-arrow-right"></i></a>
+    </nav>
+    <div id="mobile-menu" class="md:hidden bg-black absolute right-0 top-16 w-full transition-max-height duration-300 z-50">
+        <ul class="flex flex-col items-start space-y-2 p-4">
+            <li><a href="./index.html" class="font-bold text-white">Home</a></li>
+            <li><a href="#" class="text-white font-bold">About</a></li>
+            <li><a href="./services.html" class="font-bold text-white">Services</a></li>
+            <li><a href="./profile.html" class="text-white font-bold">Portfolio</a></li>
+            <li><a href="./contact_us.html" class="text-white font-bold">Contact Us</a></li>
+        </ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
     
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+            });
+        });
+    </script>        
     <main class="container mx-auto px-4 py-8">
         <h1 class="text-3xl md:text-5xl font-bold text-center mb-8">Privacy <span class="text-custom-green">Policy</span></h1>
         
-        <div class="space-y-6 text-gray-300">
+        <div class="space-y-6 text-gray-300 mx-auto lg:ml-40 lg:mr-40 px-4 sm:px-6 lg:px-8">
             <p>
                 This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
             </p>
@@ -54,15 +139,12 @@
             <ul class="list-disc pl-6 space-y-2">
                 <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
                 <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
-                <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Think Web Hub, Plot No-A2, Nirmalyanagara, Near Golakhpuri Duplex, Patia, Bhubaneswar, Odisha 751024.</li>
                 <li><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</li>
-                <li><strong>Country</strong> refers to: Orissa, India</li>
                 <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
                 <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
                 <li><strong>Service</strong> refers to the Website.</li>
                 <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</li>
                 <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
-                <li><strong>Website</strong> refers to Think Web Hub, accessible from https://thinkwebhub.com/</li>
                 <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
             </ul>
     
