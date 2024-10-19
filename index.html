@@ -74,6 +74,22 @@
     .bg-custom-green {
     color: #80e800;
     }
+    .image-slide {
+    transition: opacity 1s ease-in-out; /* Smooth transition for 1 second */
+    opacity: 0; /* Initially hidden */
+    position: absolute; /* Ensure images stack on top of each other */
+    top: 0;
+    left: 0;
+}
+
+.opacity-100 {
+    opacity: 1; /* Fully visible */
+}
+
+.opacity-0 {
+    opacity: 0; /* Fully hidden */
+}
+
     </style>
     
 </head>
@@ -116,27 +132,38 @@
    
 <!-- Content -->
 <div class="relative flex flex-col items-center justify-center min-h-screen bg-custom-radial py-20 text-center px-4 md:px-0 -mt-8">
-    <h2 class="text-xl md:text-2xl font-bold font-light tracking-wider mb-4">Crafting Your</h2>
-    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-    Web Destiny With <br> Stunning <span class="text-custom-green">Designs</span>
-    </h1>
+    <!-- Top Left Image -->
+    
+        <!-- <img src="./image/vector/logo (1).png" alt="Top Left Image" class="absolute top-20 left-20 w-12 h-12 rotate-90 z-100">
+        <img src="./image/vector/laptop.png" alt="Top Right Image" class="absolute top-20 right-20 w-12 h-12  z-50 rotate-180">
+        <img src="./image/vector/laptop.png" alt="Bottom Left Image" class="absolute bottom-20 left-20 w-12 h-12">
+        <img src="./image/vector/logo (1).png" alt="Bottom Right Image" class="absolute bottom-20 right-20 w-12 h-12"> -->
+
+    <!-- Content (Text and Button) -->
+    <h2 class="text-xl md:text-2xl font-bold font-light tracking-wider mb-4">Transforming Ideas into</h2>
+<h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+    Fast-Track  App & <br>Web Development with <span class="text-custom-green">AI</span>
+</h1>
+
     <p class="text-gray-400 text-base md:text-lg mb-8">
-    We don’t just create websites; we build websites that turn your visitors into customers.
+        Using AI, we develop apps and websites that personalize experiences and convert visitors into customers.
     </p>
+    
     <a href="./contact_us.html">
         <button class="px-8 py-4 text-white rounded-full shadow-lg font-semibold flex items-center gap-2 border-2 border-white hover:bg-white hover:text-black">
-        Get A Quote 
-        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
+            Get A Quote 
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
         </button>
     </a>
 </div>
 
+
 <div class="flex flex-col md:flex-row justify-between items-center lg:mx-10 lg:p-10 md:mx-10 md:p-10 sm:mx-1 sm:p-10 rounded-xl my-10" style="background-color: #1a1a1a;">
     <div class="text-white w-full md:w-1/2 p-10">
         <h1 class="text-5xl mb-6 font-bold">What We <span class="text-custom-green">Are</span></h1>
-        <p class="text-lg text-justify mb-6">We are a crew of builders, designers & investors building disruptive products in Web3 and empowering founders along the way. We are a crew of builders, designers & investors building disruptive products in Web3 and empowering founders along the way.</p>
+        <p class="text-lg text-justify mb-6">We are a dedicated team of builders, designers, and investors, consistently delivering disruptive app and web development solutions ahead of schedule while empowering founders every step of the way.</p>
         <a href="./about_us.html" class="inline-block px-6 py-3 bg-transparent text-white border border-white rounded-full transition hover:bg-white hover:text-black">
             Know More →
         </a>
@@ -243,7 +270,7 @@
 <div class="flex flex-wrap justify-between items-center lg:mx-10 lg:p-10 md:mx-10 md:p-10 mx-4 md:mx-10 mt-20 p-0 sm:p-0"> <!-- Added p-0 for mobile (default) -->
     <div class="w-full md:w-1/3 p-3"> <!-- Card 1 with responsive padding -->
         <div class="rounded-xl overflow-hidden p-1 sm:p-2" style="background-color: #1a1a1a; display: flex; flex-direction: column; min-height: 400px;">
-            <h2 class="text-white text-3xl font-bold mt-6 mb-8">Technologies We <span class="highlight text-custom-green">Working With</span></h2>
+            <h2 class="text-white text-3xl font-bold mt-6 mb-8">Technologies We <span class="highlight text-custom-green">Working </span></h2>
             <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center"> <!-- Display 3 images in a row on small screens -->
                 <img src="./image/wordpress.png" alt="WordPress" class="tech-logo w-10 h-10 rounded-lg">
                 <img src="./image/photoshop.png" alt="Photoshop" class="tech-logo w-10 h-10 rounded-lg">
@@ -312,25 +339,25 @@
     });
 </script>
 <script>
-    function rotateImages(slideClass) {
-        let currentIndex = 0;
-        const images = document.querySelectorAll(`.${slideClass}`);
+   function rotateImages(slideClass) {
+    let currentIndex = 0;
+    const images = document.querySelectorAll(`.${slideClass}`);
 
-        setInterval(() => {
-            images[currentIndex].classList.remove('opacity-100');
-            images[currentIndex].classList.add('opacity-0');
+    setInterval(() => {
+        images[currentIndex].classList.remove('opacity-100');
+        images[currentIndex].classList.add('opacity-0');
 
-            currentIndex = (currentIndex + 1) % images.length;
+        currentIndex = (currentIndex + 1) % images.length;
 
-            images[currentIndex].classList.remove('opacity-0');
-            images[currentIndex].classList.add('opacity-100');
-        }, 2000); // Change every 3 seconds
-    }
+        images[currentIndex].classList.remove('opacity-0');
+        images[currentIndex].classList.add('opacity-100');
+    }, 2000); // Change every 2 seconds
+}
 
-    // Rotate images for each card
-    rotateImages('image-slide-1');
-    rotateImages('image-slide-2');
-    rotateImages('image-slide-3');
+rotateImages('image-slide-1');
+rotateImages('image-slide-2');
+rotateImages('image-slide-3');
+
 </script>
 </body>
 </html>
