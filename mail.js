@@ -73,4 +73,3 @@ const displayError = (message) => {
     errorAlert.style.display = "none";
   }, 3000);
 };
-
