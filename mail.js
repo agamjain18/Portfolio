@@ -9,13 +9,12 @@
     measurementId: "G-NTEXZ70KC9"
   };
 
-// initialize firebase
 firebase.initializeApp(firebaseConfig);
 
 // reference your database
 var contactFormDB = firebase.database().ref("contactForm");
 
-document.getElementById("contactForm").addEventListener("Submit", submitForm);
+document.getElementById("contactForm").addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault();
@@ -24,17 +23,23 @@ function submitForm(e) {
   var emailid = getElementVal("Email");
   var msgContent = getElementVal("City");
 
+  // Validate form inputs
+  if (!validateInputs(name, emailid, msgContent)) {
+    displayError("Please fill out all fields correctly.");
+    return;
+  }
+
   saveMessages(name, emailid, msgContent);
 
-  //   enable alert
+  // Enable alert
   document.querySelector(".alert").style.display = "block";
 
-  //   remove the alert
+  // Remove the alert
   setTimeout(() => {
     document.querySelector(".alert").style.display = "none";
   }, 3000);
 
-  //   reset the form
+  // Reset the form
   document.getElementById("contactForm").reset();
 }
 
@@ -51,3 +56,21 @@ const saveMessages = (name, emailid, msgContent) => {
 const getElementVal = (id) => {
   return document.getElementById(id).value;
 };
+
+// Function to validate inputs
+const validateInputs = (name, emailid, msgContent) => {
+  return name.trim() !== "" && emailid.trim() !== "" && msgContent.trim() !== "";
+};
+
+// Function to display error message
+const displayError = (message) => {
+  const errorAlert = document.querySelector(".error-alert");
+  errorAlert.innerText = message;
+  errorAlert.style.display = "block";
+
+  // Remove the error alert after a few seconds
+  setTimeout(() => {
+    errorAlert.style.display = "none";
+  }, 3000);
+};
+
