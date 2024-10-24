@@ -127,10 +127,10 @@
         
                         <div class="form-row grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                             <div class="form-col">
-                                <input type="text" placeholder="Enter Your Name" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
+                                <input type="text" placeholder="Enter Your Name" id="Name" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
                             </div>
                             <div class="form-col">
-                                <input type="text" placeholder="Phone Number" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
+                                <input type="text" placeholder="Phone Number" id="Phone_Number" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
 
                             </div>
                         </div>
@@ -141,7 +141,7 @@
         
                         <div class="form-row grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                             <div class="form-col">
-                                <input type="email" placeholder="Email" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
+                                <input type="email" placeholder="Email" id="Email" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
                             </div>
                             <div class="form-col">
                                 <select class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
@@ -159,20 +159,20 @@
         
                         <div class="form-row grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                             <div class="form-col">
-                                <input type="text" placeholder="Business do you have?" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
+                                <input type="text" placeholder="Business do you have?" id="Detials" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
                             </div>
                             <div class="form-col">
-                                <input type="text" placeholder="You are from?" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
+                                <input type="text" placeholder="You are from?" id="City" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green">
                             </div>
                         </div>
         
                         <div class="form-row mb-6">
                             <div class="form-col">
-                                <textarea placeholder="Give a short description, what you want from us." class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green"></textarea>
+                                <textarea placeholder="Give a short description, what you want from us." id="Description" class="w-full p-3 bg-black text-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:text-custom-green"></textarea>
                             </div>
                         </div>
         
-                        <button type="submit" class="mt-8 bg-transparent text-white font-bold border-2 border-white rounded-full py-3 px-6 hover:bg-white hover:text-black transition duration-300">
+                        <button type="submit" id="Submit" class="mt-8 bg-transparent text-white font-bold border-2 border-white rounded-full py-3 px-6 hover:bg-white hover:text-black transition duration-300">
                             Submit
                         </button>
                     </form>
@@ -195,6 +195,7 @@
                 mobileMenu.classList.toggle('open'); // Add class to trigger height change
             });
         });
+        
     </script>
 </body>
 </html>
