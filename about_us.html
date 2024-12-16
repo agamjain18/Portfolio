@@ -8,12 +8,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>ABOUT US</title>
     <script>
-        fetch('./footer.html')
+        fetch('./footer ')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
             });
-            fetch('./navbar.html')
+            fetch('./navbar ')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;
@@ -85,23 +85,23 @@
         <!-- Navigation Links (Desktop) -->
         <ul id="menu" class="hidden md:flex items-center space-x-6 md:space-x-6 lg:space-x-8">
             <li><a href="./" class="text-white font-bold lg:text-2xl ">Home</a></li>
-            <li><a href="./about_us.html" class="text-white font-bold lg:text-2xl text-custom-green">About</a></li>
-            <li><a href="./services.html" class=" text-white font-bold lg:text-2xl ">Services</a></li>
-            <li><a href="./profile.html" class="font-bold lg:text-2xl text-white">Portfolio</a></li>
-            <li><a href="./contact_us.html" class="text-white font-bold lg:text-2xl">Contact Us</a></li>
+            <li><a href="./about_us " class="text-white font-bold lg:text-2xl text-custom-green">About</a></li>
+            <li><a href="./services " class=" text-white font-bold lg:text-2xl ">Services</a></li>
+            <li><a href="./profile " class="font-bold lg:text-2xl text-white">Portfolio</a></li>
+            <li><a href="./contact_us " class="text-white font-bold lg:text-2xl">Contact Us</a></li>
         </ul>
 
-        <a href="./contact_us.html" class="hidden md:block bg-transparent border-2 border-white text-white  lg:text-xl py-1 px-2 rounded-full shadow-lg hover:bg-white hover:text-black transition">Get A Quote <i class="fas fa-arrow-right"></i></a>
+        <a href="./contact_us " class="hidden md:block bg-transparent border-2 border-white text-white  lg:text-xl py-1 px-2 rounded-full shadow-lg hover:bg-white hover:text-black transition">Get A Quote <i class="fas fa-arrow-right"></i></a>
     </nav>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden bg-black  absolute right-0 top-16 w-full transition-max-height duration-300 z-50">
         <ul class="flex flex-col items-start space-y-2 p-4">
-            <li><a href="./index.html" class=" font-bold text-white">Home</a></li>
-            <li><a href="./about_us.html" class=" font-bold text-custom-green">About</a></li>
-            <li><a href="./services.html" class="text-white font-bold ">Services</a></li>
-            <li><a href="./profile.html" class=" text-white font-bold">Portfolio</a></li>
-            <li><a href="./contact_us.html" class="text-white font-bold">Contact Us</a></li>
+            <li><a href="./index " class=" font-bold text-white">Home</a></li>
+            <li><a href="./about_us " class=" font-bold text-custom-green">About</a></li>
+            <li><a href="./services " class="text-white font-bold ">Services</a></li>
+            <li><a href="./profile " class=" text-white font-bold">Portfolio</a></li>
+            <li><a href="./contact_us " class="text-white font-bold">Contact Us</a></li>
         </ul>
     </div> 
 <h1 class="text-center text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl mb-20 font-bold ">
