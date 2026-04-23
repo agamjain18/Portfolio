@@ -1,0 +1,37 @@
+.blogsPage {
+  min-height: calc(100vh - 100px); /* Adjust based on navbar height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 2rem;
+  background: var(--bg-black);
+  color: white;
+}
+
+.emptyState {
+  text-align: center;
+  max-width: 600px;
+}
+
+.emptyIcon {
+  display: none;
+}
+
+.emptyState h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.emptyState p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.8;
+  max-width: 450px;
+  margin: 0 auto;
+  letter-spacing: 0.02em;
+}

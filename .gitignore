@@ -1,0 +1,17 @@
+# Frontend
+agnoz-react/node_modules/
+agnoz-react/dist/
+agnoz-react/dist-ssr/
+agnoz-react/*.local
+
+# Backend
+backend/venv/
+backend/.env
+backend/__pycache__/
+backend/*.pyc
+
+# General
+.vscode/
+.idea/
+.DS_Store
+*.log

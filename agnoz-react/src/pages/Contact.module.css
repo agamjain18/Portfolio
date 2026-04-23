@@ -1,0 +1,219 @@
+.contactPage {
+  min-height: 100vh;
+  padding: 160px 0 100px;
+  background: var(--bg-black);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.header h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.header p {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+}
+
+@media (max-width: max-content) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contactPage {
+    padding: 120px 0 60px;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.infoItem {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.icon {
+  color: var(--primary);
+  margin-top: 5px;
+}
+
+.infoItem h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoItem p {
+  color: var(--text-muted);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--bg-card);
+  padding: 3rem;
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+}
+
+@media (max-width: 600px) {
+  .form {
+    padding: 1.5rem;
+  }
+}
+
+.formGroup input, .formGroup textarea, .select {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  appearance: none;
+}
+
+.select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.5rem center;
+  background-size: 1.2rem;
+}
+
+.select option {
+  background: #111;
+  color: white;
+}
+
+.formGroup input:focus, .formGroup textarea:focus, .select:focus {
+  border-color: var(--primary);
+  background: rgba(128, 232, 0, 0.05);
+}
+
+/* Fix Autofill background color */
+.formGroup input:-webkit-autofill,
+.formGroup input:-webkit-autofill:hover, 
+.formGroup input:-webkit-autofill:focus,
+.formGroup textarea:-webkit-autofill,
+.formGroup textarea:-webkit-autofill:hover,
+.formGroup textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #111 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--primary);
+  color: var(--bg-black);
+  padding: 1.25rem;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.submitBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(128, 232, 0, 0.3);
+}
+
+/* Success Modal Styles */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modal {
+  background: #111;
+  border: 1px solid var(--glass-border);
+  padding: 4rem 3rem;
+  border-radius: 32px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modalIcon {
+  width: 80px;
+  height: 80px;
+  background: rgba(128, 232, 0, 0.1);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+}
+
+.modal h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.modal p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.closeBtn {
+  background: var(--primary);
+  color: var(--bg-black);
+  padding: 1rem 3rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.closeBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(128, 232, 0, 0.2);
+}

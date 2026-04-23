@@ -1,0 +1,231 @@
+.aboutPage {
+  min-height: 100vh;
+  background: var(--bg);
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Hero ── */
+.hero {
+  padding: 180px 0 80px;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 1.5rem 0 2rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.highlight {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-sub);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ── Stats ── */
+.statsSection {
+  padding: 60px 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2.5rem 1.5rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.statValue {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+/* ── Story ── */
+.storySection {
+  padding: 100px 0;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.textArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.textArea p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-sub);
+}
+
+.storyImage {
+  position: relative;
+}
+
+.imagePlaceholder {
+  aspect-ratio: 1/1;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(163, 255, 0, 0.1) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+.innerIcon {
+  color: var(--primary);
+  opacity: 0.5;
+  filter: drop-shadow(0 0 20px var(--primary));
+}
+
+/* ── Values ── */
+.valuesSection {
+  padding: 100px 0;
+  background: rgba(0,0,0,0.2);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.valueCard {
+  background: var(--bg-card);
+  padding: 3rem 2rem;
+  border-radius: 32px;
+  border: 1px solid var(--border);
+  transition: all 0.4s ease;
+}
+
+.valueCard:hover {
+  border-color: var(--primary);
+  background: rgba(163, 255, 0, 0.02);
+}
+
+.valueIcon {
+  width: 64px;
+  height: 64px;
+  background: rgba(163, 255, 0, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.valueCard h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.valueCard p {
+  color: var(--text-sub);
+  line-height: 1.7;
+}
+
+/* ── Mission ── */
+.missionSection {
+  padding: 100px 0 160px;
+}
+
+.visionMission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.box {
+  background: var(--bg-card);
+  padding: 3rem;
+  border-radius: 32px;
+  border: 1px solid var(--border);
+}
+
+.box h3 {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-sub);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .storyGrid { gap: 3rem; }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 140px 0 60px; }
+  .storyGrid { grid-template-columns: 1fr; }
+  .valuesGrid { grid-template-columns: 1fr; }
+  .visionMission { grid-template-columns: 1fr; }
+  .box { padding: 2rem; }
+  .statValue { font-size: 2.5rem; }
+  .statCard { padding: 2rem 1rem; }
+}

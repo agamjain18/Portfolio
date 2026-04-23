@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@700;800;900&family=Syne:wght@700;800&display=swap');
+
+/* ─── DESIGN TOKENS ─────────────────────────────────────────── */
+:root {
+  --primary:        #80e800;
+  --primary-dim:    rgba(128, 232, 0, 0.12);
+  --primary-glow:   rgba(128, 232, 0, 0.25);
+  --secondary:      #00e5ff;
+  --secondary-dim:  rgba(0, 229, 255, 0.1);
+
+  --bg:             #050507;
+  --bg-card:        #0d0d12;
+  --bg-surface:     #111118;
+  --border:         rgba(255,255,255,0.07);
+  --border-hover:   rgba(128,232,0,0.4);
+
+  --text:           #f0f0f0;
+  --text-sub:       rgba(240,240,240,0.55);
+  --text-dim:       rgba(240,240,240,0.3);
+
+  --radius-xs:      8px;
+  --radius-sm:      14px;
+  --radius-md:      20px;
+  --radius-lg:      30px;
+  --radius-xl:      40px;
+  --radius-full:    999px;
+
+  --shadow-glow:    0 0 60px rgba(128,232,0,0.15);
+  --shadow-card:    0 24px 64px rgba(0,0,0,0.6);
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Syne', sans-serif;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+a { color: inherit; text-decoration: none; }
+button { border: none; cursor: pointer; background: none; font-family: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ─── SCROLLBAR ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 2px; }
+
+/* ─── SELECTION ─────────────────────────────────────────────── */
+::selection { background: var(--primary); color: #000; }
+
+/* ─── UTILITIES ─────────────────────────────────────────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: var(--primary-dim);
+  border: 1px solid var(--primary-glow);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 8vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, #fff 30%, rgba(255,255,255,0.55));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.section-title .accent {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-sub {
+  font-size: 1.1rem;
+  color: var(--text-sub);
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+/* ─── APP LAYOUT ─────────────────────────────────────────────── */
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ─── NOISE OVERLAY ─────────────────────────────────────────── */
+.app::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}

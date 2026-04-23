@@ -1,0 +1,120 @@
+.portfolio {
+  padding: 120px 2rem;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .portfolio { padding: 80px 1.5rem; }
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .header { 
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-bottom: 3.5rem; 
+    gap: 1.5rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+@media (max-width: 900px) {
+  .grid { gap: 3rem; }
+}
+
+@media (max-width: 650px) {
+  .grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.imageBox {
+  position: relative;
+  aspect-ratio: 16/10;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+/* Hover state removed */
+
+/* Removed scale transform */
+.thumb {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hover overlay removed */
+
+.viewBtn {
+  width: 72px;
+  height: 72px;
+  background: var(--primary);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.pTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+  .pTitle { font-size: 1.5rem; }
+}
+
+.tags { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.9rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-sub);
+}
